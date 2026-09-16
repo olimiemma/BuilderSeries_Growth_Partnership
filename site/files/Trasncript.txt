@@ -1,0 +1,882 @@
+Intro
+0:00
+This is the newest and most up-to-date GoHighle tutorial you're going to find on the internet right now. I'm going to
+0:05
+walk you through the entire platform step by step like you've never touched it before. By the end of this video,
+0:10
+you'll know how to set up your account. Watch AI build an entire business system from one prompt. Build a website by
+0:17
+typing plain English. Create 100 social media posts in minutes. Set up AI that
+0:22
+answers your messages and phone calls. Automate your follow-up. And even turn all of it into your own software
+0:28
+company. and I'll show you how beginners are packaging these exact skills into an easy $500 monthly service. If we haven't
+0:34
+met yet, I'm Sean's clone. Shawn is the owner of a social media marketing agency that's made over $5 million in the last
+0:41
+12 months, winning awards like the Inc. 5000 fastest growing companies, the GoHighle Gold Software Award, and many
+0:48
+others. Everything you're about to see is the same software his agency uses every single day. All I ask is that you
+0:54
+like and subscribe if you find this video helpful. One quick thing before we start the tutorial. At any point, if you
+1:00
+want to follow along and build with me, use the first link in the description. It gets you an extended 30-day free
+1:06
+trial instead of the standard 14 days, plus my community with over 100 video lessons and AI prompt library and
+1:13
+$11,577 in bonuses completely free. All right, let's jump in with chapter one, getting
+Chapter 1 : Getting to Know the Platform
+1:20
+to know the platform. This is the main dashboard. Over on the left side, you've got conversations. That's where you can
+1:26
+see every text, email, Instagram DM, Facebook message, and WhatsApp message in one inbox. Below that, you've got
+1:33
+calendars for booking appointments, contacts tab for seeing all your lead and client information, payments where
+1:39
+you can send invoices and contracts, sites for funnels and websites, marketing tab for social media and email
+1:45
+campaigns, automation for workflows, memberships for courses, and a few new ones right here, which are AI studio and
+1:52
+AI agents. And real quick, look right here at the top of the screen. See this little sparkle icon? That is Ask AI.
+1:58
+This is arguably the most important button they've ever added to this platform. And I'm going to show you exactly what it does in a few minutes.
+2:05
+But first, let me share some of the basics you need to know. So, that's your home base. Now, chapter two, setting up
+Chapter 2 : Setting Up Your Account in Sixty Seconds
+2:11
+your account in 60 seconds. So, when you first sign up, you get what's called an agency account. Think of that as your
+2:17
+headquarters. Inside your agency, you can create unlimited sub accounts, one for each client or one for your own
+2:23
+business. So, from the agency view, I'm going to click on sub accounts right here in the left menu. You'll see a list
+2:29
+of any sub accounts you already have. To spin up a new one, I'll click the blue create sub account button in the top
+2:34
+right. Now, go highle gives you two options. You can start from scratch or you can start from a snapshot. And this
+2:40
+is the part most beginners miss. A snapshot is basically a pre-built template. It already has the funnels,
+2:46
+the workflows, the pipelines, the email and text sequences, the calendar, the tags, all of it already built out for a
+2:53
+specific type of business. Go High Leo gives you a handful of these for free. I'm going to click next and then I'm
+2:58
+going to pick a snapshot. Now it's asking me for the basic business info for my client. I'll type in the business name, demo plumbing co, their email,
+3:06
+their phone number, the business address, the time zone. Then I click create sub account down at the bottom. And that's it. In under 60 seconds, I
+3:13
+have a functioning CRM, a website, a booking calendar, and automated follow-up sequences already inside this
+3:19
+account. Now, all I have to do is make some tweaks and hit publish. That's the classic way to start, and it works. But
+3:25
+it gets better. Chapter [music] 3, the 2026 way. Instead of loading a template, you just describe the business and the
+Chapter 3 : The 2026 Way
+3:32
+AI builds everything custom. You're about to watch it set up a real HVAC company from scratch. And this might be
+3:38
+the most impressive thing in this entire video. I stopped mindlessly importing snapshots for everyone. Now I just tell
+3:43
+the account what to build and the AI builds it out for me. It's called Ask AI and it's built right into Go High Level.
+3:50
+Now, here's the thing most people still don't get about it. It's not just a chatbot that answers questions. It
+3:55
+actually does the work for you. Like I said earlier, it can take 182 different actions inside your account. Real
+4:01
+actions. It can build your pipelines, your calendars, your custom fields, your email templates, your chatbot, even your
+4:08
+social media posts. So instead of loading a generic template and fixing it, you just describe the business and
+4:13
+it builds the whole thing custom. So let me show you what this looks like with Summit Heating and Air. Instead of
+4:18
+hunting down some HVAC snapshot, I just open up Ask AI and I type out what I want. So I tell it, you're setting up a
+4:24
+brand new account for a real HVAC company called Summit Heating and Air in Marietta, Georgia. They do AC repair,
+4:30
+heating repair, new installs, and seasonal maintenance. And then I give it the full checklist of everything I wanted to build. You can pause right
+4:37
+here if you want to read the whole thing. And if you want to copy it word for word, you can get all my prompts for free with the link in the description.
+4:43
+But more on that later. Now, watch what it does first. Before it builds a single thing, it actually goes and reads
+4:49
+Summit's real website. It pulls their services, their colors, even their logo. Then it writes up a plan, a full
+4:56
+checklist of everything it's about to set up. And here's the part I love. It stops and it asks me to approve it
+5:02
+first. So, it's never doing stuff behind my back. I look it over and I just hit yes, build it all, and then it goes to
+5:07
+work. So, let me actually walk you through everything it built because this right here is what replaces the
+5:13
+snapshot. First, it built them a real sales pipeline. They call it Summit HVAC sales, and it's got actual stages that
+5:19
+make sense for an HVAC company. New lead, quote, sent, job scheduled, job
+5:24
+complete, review requested. So, now every lead they get has a place to live and nothing slips through the cracks.
+5:30
+Then, it built the custom fields to match stuff like what kind of system the customer has and what service they need.
+5:36
+And it even filled in the options like central AC, a heat pump, a furnace. With a snapshot, those fields would have come
+5:42
+in totally blank. Next, it set up a booking calendar just for service calls. And then it built them a brand board,
+5:48
+and this part kind of blew me away. It took Summit's real logo and their exact brand colors right off [music] their
+5:54
+website. So, everything it makes from here is already on brand. A snapshot can't do that. A snapshot brings
+5:59
+whatever colors the template maker picked, and [music] you're stuck fixing it later. Then it wrote their email templates, a welcome email for new
+6:06
+leads, an appointment reminder, and a review request to send after the job's done. All written for an HVAC company,
+6:12
+ready to go. And then it built them a chatbot named the Summit HVAC Assistant. And it's not some dumb bot. It's trained
+6:18
+on all five of their services, their service area, their booking process, even how to handle common questions and
+6:24
+push back. So, it can talk to a customer and book an appointment day or night. And then it did the thing that really
+6:29
+got me. It wrote them a whole week of social media posts. Five of them. A summer tuneup reminder, an air filter
+6:35
+tip, a post about their membership plan, and one on the five warning signs your AC is about to go out. But it didn't
+6:41
+just write the captions, it made the images, too. And Summit's exact brand colors. And it scheduled them all out.
+6:47
+So, they've got a week of content designed and posted before I've even finished my coffee. So, just take a step
+6:52
+back and look at what it built. a [music] pipeline, custom fields, a calendar, a brand board, email templates, a trained chatbot, and a week
+6:59
+of branded posts scheduled out. All of it custom. All of it from that one prompt. And the whole thing took a few
+7:05
+minutes. Now, here's the huge difference from a snapshot. This isn't a generic skeleton that I have to go fix. It's
+7:10
+custom from the very first second. It used their real services, their real city, their real brand. There's nothing
+7:16
+blank sitting there waiting for me to fill in. It's just done. And I'm not even done yet because for the website,
+7:21
+Gohigh Level has another AI tool called AI Studio. So, I just describe the site I want and I pointed at their current
+7:27
+website and it builds the whole thing. Their logo, their colors, their phone number. It even pulled in their real
+7:33
+five-star reviews. A clean modern site with a button to request an appointment all from one prompt. And the best part
+7:39
+is how easy it is to change [music] anything. So, let's say I want to add a financing step to their pipeline. I
+7:44
+don't go digging through settings. I just ask. And watch this. It remembers the whole pipeline it just built and it
+7:50
+drops the financing stage in right where I wanted it without breaking anything else. That took about 10 seconds. With a
+7:57
+snapshot, you'd be clicking through menus for 20 minutes just to make that one little change. Now, let's give that business a home on the internet. Chapter
+8:03
+4, building your website with AI Studio. AI Studio is GoHigh Level's vibe coding
+8:09
+builder where you describe what you want in plain English and it builds you a full landing page, lead magnet, website,
+8:16
+or even a mini web app right on the screen in real time. No code, no
+8:21
+templates to fight with. You type and it builds. To turn it on, go to your sub account, click settings, then lab,
+8:27
+scroll to the bottom, and flip AI Studio on. Then head back to the main navigation and you'll see AI Studio
+8:33
+sitting right there in the left menu. When you click in, you'll see it can build landing pages, dashboards, task
+8:38
+managers, even full apps. [music] And I've tested a lot of vibe coding software this year. The best use case
+8:44
+for tools like these is digital products and lead magnets. Things like calculators, quizzes, and interactive
+8:50
+tools. So, that's exactly where I started. I typed in this prompt. Build a modern and engaging quizunnel that will act as a lead magnet for a tax firm
+8:56
+trying to generate leads. Keep it under 10 questions. Once complete, connect it to my CRM. Pretty basic on purpose. I
+9:03
+wanted to see what it could do on its own. It thought for about 18 seconds and within minutes, it delivered a clean
+9:09
+quiz lead magnet and positioned itself to collect the user's info at the end, but the questions felt more like an
+9:15
+application. So, I gave it a second prompt. Recreate this quiz, but this time focus on showing the user how much
+9:20
+money they can save by switching to an escort. Before you reveal the answer, make sure you collect their information.
+9:25
+And this time, it nailed it. Short quiz collected the user's name, email, and phone number, and then estimated their
+9:31
+tax savings. And here's why that matters. Quiz funnels convert at 40 to 50% on average compared to about 18% for
+9:39
+a traditional landing page. So if you're building lead magnets for clients, quizzes flat out outperform almost
+9:46
+everything else. Then I hit connect and within seconds that quiz was storing every lead directly into the CRM as a
+9:52
+contact. No Zapier, no integrations, no setup. Next, I wanted a booking button on the quiz so that after someone sees
+9:58
+their tax savings, they can book a consultation while they're still excited. So, I typed connect the book a free consultation button to a calendar
+10:05
+in my sub account. It asked which calendar, and I picked one, and boom, it was done. The calendar was connected in
+10:10
+seconds, and it actually matched the branding of the funnel. I tested it, booked an appointment, and it was sitting right there in the calendar
+10:17
+view. Then I said, "Create a tag called quiz lead anytime a contact is created with this form." [music] And it built
+10:23
+that, too. Now, every quiz lead gets tagged automatically so I can drop them into email and text nurture campaigns on
+10:29
+autopilot. But I really wanted to push this thing. So, I tried something harder. I told it to clone this website and I gave it the URL of an accounting
+10:35
+firm. Quick disclaimer, make sure you have the rights to whatever you clone. But watch what happened. It came back
+10:41
+with a near identical version of the site. The layout, the sections, the colors, the structure. It captured all
+10:47
+of it. Then, just for fun, I cloned Apple's website, then Mercedes. Both came out looking incredible. Think about
+10:53
+what this means for your agency. A client shows you a website they love and instead of spending weeks going back and
+10:58
+forth with a designer trying to recreate it, you clone it in seconds and customize it with their branding. You
+11:04
+could build three or four client websites in a single afternoon. That used to take weeks and then I really pushed it. I typed build a free tax web
+11:11
+app that helps users identify business tax strategies, what they are, and calculate estimated tax savings. Users
+11:18
+must provide their name, email, and number before using it. add a call to action to book a free tax consultation
+11:24
+wherever most relevant. And it delivered a full interactive web app with three tax strategies. ESCORP election, Augusta
+11:31
+rule, home office deduction, each with its own calculator, and a book an appointment button. Then I asked it to
+11:37
+add more strategies, and a tax bracket slider. And it did that, too. Six strategies, live calculators, a slider,
+11:44
+and a calendar integration. All from two prompts. Hit publish, add a custom domain, and real people can use this
+11:51
+tool today. This is how the oneperson AI agency actually makes money in 2026. So
+11:56
+there it is, a real website built just by typing sentences. Now, let me show you the tool you'll end up using every
+Chapter 5 : Ask AI, Your AI Employee
+12:02
+single day. Chapter 5, Ask AI, your AI employee. Before I show you what you can
+12:07
+do, let me first show you how I've been using this. First, you need to know that Gohigh Level's new Ask AI feature is
+12:13
+different from a regular chatbot because it can actually read everything inside of your GoHigh Level account. Your
+12:19
+contacts, your pipelines, your conversations, your calendars, your workflows, everything. So, I gave it one
+12:25
+simple prompt. I told it to review all the data in my sub account and tell me how my agency can make the most money
+12:31
+possible in the next 30 days. And what it did next blew me away. It created a
+12:36
+full 30-day revenue audit of my entire agency. It started by pulling data from
+12:41
+every major area simultaneously. It analyzed my lead sources and showed me a pie chart breaking down exactly where my
+12:48
+leads were coming from. Paid search, direct traffic, organic referrals, even chat GPT. But here's where it got really
+12:55
+interesting. It identified hot leads that needed immediate action. These were real contacts sitting in my CRM who were
+13:02
+actively trying to buy. One prospect had literally replied asking for pricing and we hadn't responded yet. Another one had
+13:09
+just confirmed their strategy call for the next day. There were about 10 contacts total who were either asking
+13:15
+for pricing, had calls booked, or had proposals pending. These were people ready to sign and without the AI
+13:21
+flagging it, some of them might have slipped through the cracks. But the single biggest lever it identified was
+13:26
+our database reactivation pipeline. It told us that growing an agency isn't always about finding new leads. It's
+13:33
+about warming up the hundreds of cold leads already sitting in our CRM who were never converted. Contacts who have
+13:39
+been tagged as abandoned or had their strategy calls canled. People who showed interest but never closed. Even a 10%
+13:46
+conversion rate on hundreds of those leads would be significant revenue. Then I pushed it further. I told it my
+13:52
+average price point is around $1,000 per month and asked how much revenue I could realistically generate if I executed the
+14:00
+plan. I told it to take a moderately aggressive approach and not to answer until it was 95% confident. And this is
+14:07
+where it got crazy. You could actually see the AI thinking through the math in real time. It presented its findings
+14:13
+with bar charts, confidence ratings for each assumption, and a full breakdown of where the 32 new clients would come
+14:19
+from. And ultimately, it projected roughly $32,000 in new monthly recurring
+14:25
+revenue within 30 days. And truthfully, it is actually not too far off on our average for new sales, which made it
+14:31
+feel more realistic. But here's the part that really got me. It didn't just show me the data. It offered to start taking
+14:38
+action right there. It said it could draft replies to the hot leads who were waiting on a response, set up follow-up
+14:44
+tasks for the team, and build out the entire reactivation campaign sequence. I'll show you this in action later in
+14:50
+this video, but for now, I want you to understand how powerful this can be for you or your clients. Imagine getting
+14:57
+your client set up with a sub account, connecting all their communication channels, and importing contacts, and
+15:03
+then prompting Ask AI to identify potential revenue opportunities. That kind of analysis can immediately set you
+15:09
+apart and position you as not just an agency, but a valuable business partner. That's the kind of analysis that used to
+15:16
+need a paid consultant. Now, it's a prompt, and here's the part everyone doing social media needs to see. Chapter
+Chapter 6 : 100 Posts in Seven Minutes
+15:22
+six, 100 posts in seven minutes. All right, before the clock starts, let me share with you the tool I'm using. It's
+15:28
+called Ask AI, and it's built right into High Lee, the platform that runs my entire agency. Our contacts, our
+15:34
+calendars, and the social planner all live in there. So, Ask AI isn't just a chatbot. It can actually do work inside
+15:41
+the account, like making graphics and scheduling posts. And if you want to follow along, just click the first link
+15:46
+in the description below and you can set it up while you watch. Okay, now let's get started. And I want you to count how
+15:51
+little I type because that's the whole trick. I opened Ask AI and typed one prompt for Atlas Auto Repair. This is
+15:57
+the only prompt I wrote by hand all day. Act as an elite Instagram strategist and graphic designer. Research Atlas Auto
+16:03
+Repair and the top auto repair posts. Find the best image formats and angles getting the most reach right now. then
+16:09
+write me the best prompt to paste back into you to create 33 onbrand Instagram graphics. And I pasted in their website
+16:16
+link. Notice I didn't ask it to make the post. I asked it to write the prompt that makes the post. That's called
+16:21
+metaprompting. The AI knows exactly what wording gets the best results out of itself. So instead of me guessing, it
+16:27
+writes its own instructions. And since Ask AI is powered by Claude, the research, the prompt writing, and the
+16:34
+graphics all happen in one tool. Now watch what it does. The thinking panel opens up and you can see it working in
+16:40
+real time. It fetched their website. It found the exact fonts they use and literally called them out as the brand
+16:47
+fonts. It built a color palette around charcoal black and ember red with the real hex codes. It even researched
+16:53
+what's getting reached in auto repair right now like warning light explainers and before and after reveals. Then it
+16:59
+handed me back a monster prompt. Brand colors, font style, composition rules, all 33 posts planned out by category. I
+17:06
+couldn't have written this prompt in an hour. It did it in about a minute. I just hit copy. Then Daybreak Coffee got
+17:11
+the same treatment. It studied their Instagram, locked onto that espresso brown and cream look, and came back with
+17:17
+a master prompt built around eight content pillars. And for post, I got even lazier. I just typed create another
+17:23
+prompt but for Post Fitness Studio and pasted their website. And that's literally it. Now, here's where most
+17:29
+people would paste that prompt into the chat and sit there watching it work. Don't do that. This is where scheduled
+17:34
+task comes in. On the left side of Ask AI, I click scheduled, then new task. I named it 33 social media posts. Auto
+17:41
+repair. I pasted in the prompt the AI just wrote for me. Then I set the frequency. You can run it manually every
+17:46
+hour, daily, weekdays, or weekly. I picked weekly, every Monday at 9:00 a.m. Then I clicked create task and hit run.
+17:53
+Now, quick note, if you don't see scheduled tasks in your account yet, go into your Highle Lab settings and turn
+17:59
+on the new Ask AI features. That's where the new stuff lives before it rolls out to everyone. I repeated that for the
+18:05
+coffee shop and the gym. Paste, schedule, run. Three tasks on screen, each with a little running status next
+18:11
+to it. And then I did my favorite part of this entire video. I closed my laptop all the way because these tasks run on
+18:17
+highle servers, not my computer. The AI kept building posts for three different businesses while I went and got lunch.
+18:23
+So, I came back, opened the laptop, and all three tasks were done. Each chat even ended with a tidy completion table,
+18:30
+33 graphics, 33 captions, and absolutely zero input from me. Let's go brand by
+18:35
+brand because this is where it gets crazy. Starting with Atlas Auto Repair, 33 finished post in their charcoal and
+18:41
+red. Every post has a graphic and a caption sorted into categories, trust posts, service posts, educational tips,
+18:47
+before and afters, promos, and engagement posts built to get people to leave comments. And look at some of
+18:53
+these designs. There's a brand hero post with giant Atlas auto repair letters, a spotlight beam, and a red slash like a
+18:59
+real ad agency made it. There's beat the Atlanta heat with icy mist on one side and flames on the other. And there's a
+19:05
+warning lights post with five glowing dashboard icons that says bring it in, we'll decode it. Now, that's the kind of
+19:12
+post people actually save. Next, let's take a look at Daybreak Coffee. This one had a completely different feel. Warm
+19:18
+cream, caramel brown, and amber gold. There's an espresso shot pouring into a cup that looks like a commercial. a
+19:23
+coffee origins map drawn on old parchment with a compass and a coffee stain and a simple quote post that says
+19:29
+before the emails before the meetings before everything there's this for a coffee brand that's perfect then our
+19:34
+third business was Pulse Fitness total opposite their branding had black backgrounds with electric blue a glowing
+19:40
+muscle activation map that looks like sports science a 3D body scan straight out of a sci-fi movie and a bright scan
+19:47
+post that just says your first session is free that one stops your thumb mid scroll put them side by side and really
+19:54
+look about 100 posts, three brand identities, and the AI never mixed them up once. The coffee post never went
+20:00
+cyan. The gym post never went parchment. Now, the first batch is good, but I always run one more pass. I typed this,
+20:07
+act as an elite graphic designer. Review all 33 posts and enhance the design so
+20:12
+people stop scrolling. Keep the brand colors consistent with the business. And it redesigned all 33 for each business.
+20:18
+bigger, bolder headlines, dramatic lighting, cleaner layouts. The break warning post now has sound waveforms
+20:24
+next to the words grinding, squealing, and knocking. The coffee mat became a full antique masterpiece. And there's a
+20:30
+green beans to go post where the roast literally glows. Post Fitness got a bold one that just says, "Buckhead runs on
+20:37
+results." And small text mistakes from the first batch got fixed, too. It even printed a little table showing exactly
+20:42
+what it changed on every single post. 100 posts, three businesses, 7 minutes of typing. Now, what do you do with all
+20:49
+that content if you don't have a client yet? Chapter 7, building your portfolio. Now, even though I don't think you need
+Chapter 7 : Building Your Portfolio
+20:55
+this to get started, I still wanted to see what it could do. So, I gave it another prompt. I said, I want to build
+21:00
+a small portfolio of social media images and carousel examples I can show to accountants before selling. Can you
+21:07
+guide me through the best way to do this with using you? And watch what happened. The AI created an entire mock accounting
+21:13
+firm right on the spot. It came up with a fictional firm name and brand based in Atlanta. It chose a color palette of
+21:20
+deep navy, gold, and white. It gave the firm a professional tagline, and then it generated a complete portfolio. It
+21:27
+created three standalone social media posts. One was an educational tax tip post. One was a bold stat post about how
+21:34
+most small business owners don't know their monthly profit margins. and the third was an authority building post
+21:39
+about revenue, profit, and cash flow. Then it created a three- slide carousel
+21:44
+sequence. The first slide was a hook to grab attention. The second slide listed three signs that it's time to hire a
+21:50
+CPA. And the third slide was a call to action to book a free consultation. But I didn't stop there. I told the AI to
+21:57
+enhance the designs, and it upgraded all five pieces simultaneously. It added vignette gradients, metallic badge
+22:04
+elements, geometric gold accents, and refined typography. The before and after was night and day. I've been creating
+22:11
+full calendars of social media content using AskAI. In a previous video, I created 33 social media posts in one
+22:18
+prompt. I'll link that video at the end so you can check that out if you haven't already. But keep in mind, Ask AI can
+22:24
+also do a lot more than just social media posts. It can build websites, create courses, write email sequences,
+22:30
+design lead magnets, and more. But I wanted to stay focused on the path to money, a portfolio in an afternoon
+22:36
+without a single client. So now you've got the work. Let's go get the customer. Chapter eight, finding prospects and
+Chapter 8 : Finding Prospects and Sending Outreach with AI
+22:42
+sending outreach with AI. This is the chapter that's going to blow your mind because everything I've shown you so far
+22:47
+has been impressive, but this is where Ask AI goes from being a helpful tool to being a full business partner. I gave it
+22:53
+a prompt and told it to act as a B2B lead generation specialist and market researcher. I asked it to identify 25
+23:00
+small businesses in Atlanta within the accounting industry. And for each one, I wanted the company name, website, phone
+23:07
+number, email address, and so on. You can pause the video if you want to read the entire prompt. And it went to work.
+23:13
+It searched the web, checked the Google Ads Transparency Center, and came back with a list of 25 accounting firms in
+23:19
+Atlanta that are actively spending money on advertising. It pulled their websites, phone numbers, and any
+23:26
+publicly available contact information. Now, here's where it gets really smart. I told it to identify which prospects on
+23:32
+that list would benefit the most from having a consistent social media presence, and the AI analyzed all 25
+23:39
+firms. It checked their Instagram, Facebook, and LinkedIn pages. It looked at how often they were posting, how many
+23:45
+followers they had, and whether their social media matched the quality of their paid advertising. It identified
+23:51
+certain firms that were already crushing it on social media, and told me to skip those. Then, it ranked the remaining
+23:57
+firms by their social media gap, and it found one firm that was the perfect target. a firm that had a strong
+24:03
+reputation, was spending money on Google ads to acquire clients, had an established presence in their industry,
+24:09
+but had almost no social media presence at all. But this is where it gets crazy. I told Ask AI to act as an Instagram
+24:16
+strategist, an outreach specialist, and create three sample social media posts specifically for that firm along with a
+24:23
+cold outreach email. And it didn't create generic posts. It created posts that were branded to look like they came
+24:29
+from that specific firm. It used their brand colors. It referenced their actual specialties. It created content that
+24:36
+spoke directly to their target audience. One post was about their industry expertise. Another was about a specific
+24:42
+tax credit that their clients could benefit from. And the third was a powerful quote about revenue, profit,
+24:48
+and cash flow. Then it wrote a cold outreach email that referenced specific details about the prospect. It mentioned
+24:55
+where they had been seen in the industry. It pointed out the gap between their ad spend and their non-existent
+25:00
+social media. And it offered to show them the three posts that were already created specifically for them. No pitch,
+25:07
+just the work. But I wanted to push it even further. So I told the AI to create another version of the email, but this
+25:13
+time embed one of the social media images directly in the email body. And it did exactly that. It took the post
+25:20
+about revenue, profit, and cash flow, embedded it right in the email, and wrote a shorter, punchier version of the
+25:26
+outreach. The subject line was personalized. The image was the first thing you saw when you opened the email.
+25:32
+And the call to action asked if they wanted to see a full month of branded content for their firm. The AI even
+25:38
+broke down why this email converts better. The subject line creates curiosity. The image does the selling
+25:44
+before you even read a word. There's no pricing mentioned. and the credibility line about growing up in the accounting
+25:49
+industry eliminates the biggest objection which is that you don't understand their world. And then I said
+25:55
+two words, send this email. The email was cued successfully. The contact was created with all the proper tags. And
+26:01
+the AI even told me what to watch for next. If there's no reply in 3 days, it can send a follow-up. If there's no
+26:08
+reply in 7 days, it drops a second visual with the restaurant theme post. And if the prospect replies yes, it will
+26:14
+build the full 30 post monthly proposal on the spot. It even asked me if I wanted it to schedule those follow-up
+26:21
+emails automatically so they fire without me having to remember. Think about what just happened from one
+26:27
+conversation inside of GoHigh Level. Ask AI came up with a business idea tailored to my skills, built the execution plan,
+26:34
+created a portfolio of professional social media posts, found 25 real
+26:39
+prospects, analyzed their social media presence, identified the perfect target,
+26:44
+created custom branded content for that specific prospect, wrote a personalized cold outreach email with an embedded
+26:51
+image and sent it through the CRM. All of that without me ever leaving the platform. So that is what happens when
+26:57
+you ask go highlevel AI to make you as much money as possible. And the truth is
+27:02
+this is just one conversation. You could do this same process for any industry. Dentists, landscapers, restaurants, real
+27:09
+estate agents. The AI tailor everything to whoever you're targeting from idea to a scent sales email without leaving one
+27:16
+chat window. Now let's make sure you never lose the leads that reply. Chapter nine, conversation AI so you never miss
+Chapter 9 : Conversation AI, So You Never Miss a Lead Again
+27:23
+a lead again. Now, let me show you how easy these are to build. For this whole video, I'm using a real med spa called
+27:28
+Balanced Aesthetics as my example. Med spas live and die by bookings and DMs, so it's perfect. Inside go high level,
+27:35
+you go to AI agents, then conversation AI, and create a new agent. There's a guided setup that walks you through
+27:42
+every step. First, you train it. This is where most chatbots fail because they only know generic stuff. Not here. I
+27:48
+drop in the Med Spa's website and the AI crawls it. It learns the services, the prices, the hours, all of it. Then I add
+27:55
+more sources, FAQs, uploaded files, like their pricing sheet. And here's a newer one. You can connect a Google Drive
+28:02
+folder, and the AI will pull from those real business documents when it answers people. You can also control when the AI
+28:08
+uses each piece of knowledge. There's an always on trigger for the basics like hours and location. Then there are smart
+28:15
+triggers that only fire on a topic. So, the laser pricing only gets pulled in when someone actually asks about laser.
+28:21
+That keeps the answers sharp instead of the AI dumping everything it knows. Second, you give it a personality.
+28:27
+There's a spot to set the bot's tone and its main goal. For this one, the goal is simple. Build trust and guide people to
+28:33
+book an appointment. Then, you add a few rules like keep replies short and don't use emojis. You can also turn on auto
+28:40
+follow-up, have it write a short summary of every conversation, and add a goodbye detection so it knows when to stop
+28:45
+talking. Third, you pick the mode. There are three. Off does nothing. Suggestive
+28:50
+means the AI writes the reply, but a human reviews it and hits send. And autopilot means the AI replies on its
+28:56
+own. Suggestive is perfect for nervous owners. They stay in control while they learn to trust it. Then, once they see
+29:03
+how good the replies are, they flip it to autopilot. Almost every client we've onboarded makes that switch. Now, watch
+29:09
+it work. I'll open the test chat and ask how much a facial costs. And boom, the AI answers with the real price in the
+29:16
+brand's voice and then offers to book me in. That took a few minutes to set up. No code, no tech skills, nothing. One
+29:23
+more thing I set up here, and it's important. Human handover. I tell the bot that the second someone asks for a
+29:28
+real person, it stops, hands the chat to me, and tags the contact. It even sends a quick message saying a human is taking
+29:35
+over, then it goes quiet so it doesn't step on us. That one setting kills the biggest fear owners have about AI.
+29:41
+Nobody gets stuck arguing with a bot and text is only half of it. Chapter 10. Voice AI, your phone receptionist.
+Chapter 10 : Voice AI, Your Phone Receptionist
+29:48
+Because the same platform can answer your phone calls, too. Think of it as an AI phone receptionist. It answers calls,
+29:54
+talks like a real person, collects info, books appointments, and can transfer to a human if it needs to. Someone calls at
+30:01
+900 p.m. on a Saturday, and instead of hitting voicemail, the AI picks up and handles it. To set this up, go to
+30:07
+settings in your sub account, then click AI agents. Hit the blue create agent button in the top right. Fill in the
+30:12
+agent name, your business name, pick a voice from the options, and preview it with the play button. Then write your
+30:18
+greeting message. For the goals, you got two modes. Basic mode is the easiest. You just check off what info you want
+30:24
+the AI to collect, like name, email, and what service they need. No prompting required. Advanced mode lets you write a
+30:31
+full custom prompt with tone instructions and specific directions. After that, go to the phone and availability section. Assign a phone
+30:38
+number and set your business hours. You can even test it right there with the built-in call widget before it goes
+30:43
+live. That's 5 to 10 minutes for a full AI receptionist. Quick note, though, it only works with LC Phone or Twilio
+30:49
+numbers, a receptionist that never takes a day off. Here's one more AI employee most people never find. Chapter 11:
+Chapter 11 : Review AI
+30:55
+Review AI. It's an AI bot that responds to reviews automatically on Google,
+31:00
+Facebook, wherever your reviews come in. It thanks people for fivestar reviews, flags negative ones for a human to
+31:06
+handle, and can even summarize all your reviews so you can see trends at a glance without reading every single one.
+31:12
+To set it up, go to the reputation management section inside your account, click settings at the top, and then go
+31:18
+to the reviews AI tab. Hit create agent. You can either pick a ready-made template or build one from scratch by
+31:24
+setting the tone, style, and personality yourself. The best part is you can filter by star rating. So you tell the
+31:31
+AI to autorely to four and five star reviews, but skip one and two stars so a
+31:36
+real person can handle those. You can also add a footer message to every response and use the AI summary feature
+31:42
+that condenses all your reviews into a quick overview. Responding to reviews fast actually helps with local SEO and
+31:48
+reputation. Most business owners never reply because they're too busy. Set this up for a client and you've got another
+31:54
+easy add-on that practically runs itself. Notice the pattern. Every one of these is a small system you set up once
+32:00
+and it just runs. Now, let's connect them all together. Chapter 12, workflows and AI agents. The automation engine
+Chapter 12 : Workflows and AI Agents
+32:06
+behind everything you've seen so far. Now, let's talk about the part that actually makes money while you sleep.
+32:11
+Workflows. A workflow in GoHigh Level is basically an if this then that automation. A new lead comes in, text
+32:18
+them in 60 seconds, wait 5 minutes, send an email, wait an hour, and book them on the calendar. That's a workflow. In the
+32:24
+old version of GoHigh Level, you had to build these by hand, dragging little trigger and action boxes around a
+32:30
+canvas. The new AI workflow builder lets you just describe what you want. I'm going to click create workflow, then
+32:36
+choose build with AI, and in the prompt box, I'll type build me a workflow for when a new lead fills out my contact
+32:42
+form. We aggressively follow up with several emails and texts within 24 hours. Then boom, it added everything,
+32:48
+and I just need to review it, rename the steps, and publish. And just recently, there's been another major new update
+32:54
+inside of workflows. You can now drop in an action called AI agent. Think of it like hiring a little worker inside your
+33:00
+workflow. You tell it what to do in plain English. You hand it a few tools, then it figures out the rest on its own.
+33:06
+That last part is a big deal. You're not dragging 15 little boxes around anymore. You tell one agent the job, and it picks
+33:12
+which tools to use, what order to use them in, and what to put inside them, all by itself. Here's how to set one up.
+33:19
+Click the plus sign in my workflow. I'll scroll to the workflow AI section or I just type agent in the search bar and
+33:26
+then click AI agent. Now you get two choices. You can pick a template or you can click build your own. Let me just
+33:32
+show you the comment to the DM template so you can quickly see how it works. As you can see, first you need to give the
+33:38
+agent instructions. In this template, it already gives the agent clear instructions which I can easily edit or
+33:44
+change. Next, you can select the AI model you want to use. And quick heads up, the AI agent is a premium action.
+33:51
+That means every time it runs, it costs a little bit. The cost goes up based on the model you select and how often you
+33:57
+are using it. Then you can give the agent tools where they can actually take action on your behalf. This one has four
+34:02
+tools selected, which makes sense for responding to people on social media. But there are also many more tools that
+34:09
+you can choose from as well. For example, I could give it access to my calendar tool if I wanted it to book appointments for my social media leads
+34:15
+as well. And finally, in the advanced options, I can give it access to conversation memory. So, it always has
+34:21
+context on what the contact has been told. So, that's great. But this next part is the one you really need to pay
+34:26
+attention to because this is how you turn all of this into your own AI software business. For a single upgrade
+34:32
+inside go high level, you can take this entire platform, the AI studio, ask AAI,
+34:37
+the workflows, email sequences, everything, and rebrand it as your own software with your own logo, your own
+34:43
+domain name, your own pricing, and more. Let me show you. I'm going to click on agency settings, then company billing,
+34:50
+then agency branding. Right here, I can upload my own logo, change the colors, set a custom domain like appyyou
+34:57
+company.com, and rename the product to literally anything I want. I could call this Shaai tomorrow, and my clients
+35:03
+would log into shaai.com and have no idea GoHighle exists underneath. Then I'm going to hop over to SAS
+35:09
+Configurator, and this is where I set my own pricing. I could charge something like $297 a month for my standard plan.
+35:16
+And Gohigh Level Stripe integration automatically will bill my clients, pays GoHigh Lee their share, and will quickly
+35:22
+drop the rest in my bank account. This is, in my honest opinion, the single best business model on the internet
+35:27
+right now for a one-person AI agency. You're not reselling a course. You're not drop shipping. You own a software
+35:34
+company with recurring revenue that's powered by the most advanced AI platform out there, and you never had to write a
+35:39
+line of code. So, here's my honest take. If you have any intention of starting an AI agency in 2026, or if you already
+35:46
+have a business and you're tired of paying for 11 different tools, Gohigh Level is the shortcut. The new AI studio
+35:53
+and Ask AI features alone make it worth it. The white label is what makes it a real business. So, that's the full
+35:59
+toolkit. Now, let me prove this isn't theory. Chapter 13, a real agency running on this every single day. These
+Chapter 13 : A Real Agency Running on This, Every Single Day
+36:06
+are actual automations inside Shan's agency with real client numbers on screen. This is the one that makes the
+36:12
+biggest difference. So, I'm starting here. It's Gohigh Level's conversation AI. And all it does is answer every
+36:18
+message that comes into a business, then guide that person to book an appointment. And when I say every
+36:23
+message, I mean every message. A text, an Instagram DM, a Facebook message, an
+36:29
+email, the chat box on the website. One single AI covers all of it 24 hours a
+36:35
+day. It never sleeps. It never takes a day off. And it never leaves a lead hanging. For this whole chapter, I'm
+36:41
+using a real med spa as my example because med spas live and die by their bookings. Now, here's what's brand new,
+36:48
+and it's a huge upgrade. Before, you gave the AI one big paragraph of instructions and just hoped it did the
+36:54
+right thing. Not anymore. Now, you can build the whole conversation visually, step by step. It's called the flowbased
+37:00
+builder. When you create a bot now, you get three choices. a guided setup, the old promptbased bot, and the new
+37:06
+flow-based builder. I pick the flow builder, name it, choose my channels, and it opens up a canvas. It looks just
+37:13
+like the workflow builder. It starts with a trigger for the second a chat begins. Then I click the plus button and
+37:18
+drop in actions. And these actions are where it gets powerful. One of them keeps asking until it gets the person's
+37:24
+name or what service they want and saves it to the contact. One reads the chat and sends people down different paths.
+37:31
+And there's a book appointment action that offers real times and books them right there in the conversation. Here's
+37:36
+a simple one I built for after hours. The bot greets the lead. It grabs their name. It asks what service they want.
+37:42
+Then it splits them. People who want a consultation get sent straight to book appointment. People with a quick
+37:48
+question just keep chatting with the AI. Every step is connected. Every branch is right there on the screen. It's so much
+37:54
+cleaner than cramming everything into one giant prompt and praying. And the best part is I can test the whole thing
+38:00
+before it ever goes live. I run a test chat right inside the builder and the logs show me exactly what the AI did at
+38:06
+every single step. So I know it works before a real customer ever touches it. Okay, the setup is cool, but results are
+38:13
+what actually matter. So let me show you what this does inside my real agency. This is the live dashboard for my
+38:18
+agency's conversation AI and everything on it is from June 1st through the 15th.
+38:24
+So this is just two weeks. In that window, the AI talked to dozens of leads completely on its own. It qualified
+38:30
+them. It answered their questions, and it even added up the hours it saved us. Now, you'll notice appointments booked
+38:37
+says zero, and that's on purpose. We don't book people through the AI's own calendar. We send everyone to our
+38:43
+booking link and track those separately. So, that zero is exactly what I expect to see. Here's the real proof. This is
+38:49
+our appointment report for those same two weeks. 162 appointments booked. 74 already
+38:55
+showed up. Now, I'm not going to sit here and tell you the AI did all of that by itself because it didn't. But it
+39:00
+helped book a lot of these. It catches every lead the second they message in. It answers them in seconds and it pushes
+39:07
+them toward our calendar while they're still interested. Most businesses let those leads sit there until the next
+39:12
+morning. By then, they've already booked with whoever answered first. Ours never go cold. Real business, real calendar
+39:18
+filling itself. Which brings us to the question you've probably been asking this whole video. How do beginners actually get paid with this? Chapter 14,
+Chapter 14 : The $500 a Month Starter Offer
+39:26
+the $500 a month starter offer. Let's start with the easiest offer you can sell. AI powered social media content
+39:32
+creation. Every local business needs content and most of them have no idea how to make it. That's where you come
+39:38
+in. But you are not going to do things the old way, like sitting in Canva for three hours per client, writing captions
+39:44
+from scratch, going back and forth on revisions. That whole era is over. One client used to eat up four or five hours
+39:51
+a week. Multiply that by 10 clients and you've got a full-time job just on content alone. That's why most solo
+39:57
+agency owners cap out at five or six clients and burnout. But with AI, the whole workflow changes. Let me show you.
+40:04
+I'm going to pull up highle right now. Inside high level, they have a feature called Ask AI. Watch what happens when I
+40:11
+use this. I just went into Ask AI and typed a simple prompt. I said, "Generate three Instagram carousel posts for a med
+40:17
+spa that wants to promote their summer glow facial package." And look at what it gave me. Each carousel has five
+40:23
+slides. The first slide is the hook, something like your summer glow starts here. Then you've got value slides
+40:29
+breaking down the benefits, what's included, why this treatment is different, and the last slide is a call
+40:35
+to action. Comment glow for a free summerlow guide. I'm going to show you why that CTA matters in a second. But
+40:41
+here's what really makes this powerful. High Level has a brandboard feature where you can plug in the client's exact
+40:46
+fonts, colors, logo, and overall aesthetic. So, when the AI generates
+40:52
+these carousels, they actually look like they belong on the client's page. They match the brand. This isn't generic
+40:58
+cookie cutter content. It looks custom because the AI is pulling from the brand board you already set up. Now, here's
+41:04
+where this offer gets loaded. You're not just posting content. You're building an entire system for $500 a month. Let me
+41:11
+show you what I mean. Remember that carousel with comment glow on the last slide? That's not just a caption, that's
+41:16
+a trigger. Inside Highle, I built a workflow where anytime someone comments glow on the client's post, an AI agent
+41:24
+automatically sends them a personalized DM. It greets them by name, delivers a free summerlow guide, and invites them
+41:31
+to book a consultation. The AI handles the entire conversation. The client doesn't have to touch anything. And that
+41:38
+lead magnet the AI agent sends. I built it in minutes using AI studio. Let me pull this up. One prompt and it
+41:44
+generated the entire summerlow guide cover page with the med spa branding, skincare tips, product recommendations,
+41:50
+a CTA to book a consultation. No graphic designer, no copywriter, just one prompt. On top of that, you layer and
+41:57
+miss call text back. So if someone calls the business and nobody picks up, Highle automatically texts them back saying
+42:04
+something like, "Hey, sorry we missed your call. how can we help? That alone saves the client leads they would have
+42:10
+lost. And then you give them the lead connector app. That's Highle's mobile app. So the client sees everything
+42:15
+happening in real time. Posts going out, DMs coming in, missed calls getting followed up, their phone is buzzing with
+42:22
+activity and they feel like their business finally has a pulse online. So let me recap what you're actually
+42:28
+selling for $500 a month. AI generated branded content, five posts a week.
+42:33
+Automated comment to DM lead generation. an AI built lead magnet, missed call, text back, and the lead connector app so
+42:40
+the client sees it all. That's a massive amount of value, and it's the perfect entry point for businesses that don't
+42:46
+have any real social media presence yet. You're getting them online, making them look legit, and starting to generate
+42:52
+leads, all while the AI does the heavy lifting. Now, remember, this is just the starter package. So, this is also the
+42:58
+time to build trust and rapport with your client. Once they see their social media looking professional and leads
+43:04
+starting to come in, they're going to want more. And that's the last chapter, your first week plan. Let's turn this
+Chapter 15 : Your First Week Plan
+43:10
+tutorial into action. Day one, start your extended 30-day trial with the first link below and create your first
+43:16
+sub account. Day two, describe your business to Ask AI and let it build your system. Then open AI Studio and build
+43:24
+your website. Day three, use Ask AI to create a batch of social media posts and
+43:29
+build your portfolio just like you saw in chapter 7. Day four, set up your
+43:34
+conversation AI so every message gets answered. Day five, turn on a workflow or two, maybe miss and call, text back
+43:41
+so your follow-up runs itself. That's one week. And at the end of it, you won't just understand, go high level.
+43:47
+You'll have a working business system you can show to any local business owner. That's when the $500 a month
+43:52
+offer from Chapter 14 stops being an idea and becomes your first client. Remember, the software is only half of
+43:58
+this. The other half is knowing what to sell and how to deliver it. That's exactly what's inside my community. Over
+44:04
+100 video lessons, my AI prompt library, and $11,577
+44:10
+and bonuses, all free when you start your extended 30-day trial with the first link in the description. And once
+44:16

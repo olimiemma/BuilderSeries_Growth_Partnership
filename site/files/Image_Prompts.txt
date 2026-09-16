@@ -1,0 +1,80 @@
+Generated with the built-in image-generation tool.
+
+{
+  "first": [
+    [
+      "01_follow_up_hook",
+      "A sculptural lime green ribbon traveling through beautiful translucent glass message cards on a deep ink navy background, one small card falling aside symbolizes a missed enquiry. Editorial 3D studio aesthetic, premium boutique consultancy campaign, uncluttered. Large beautifully typeset warm white headline upper half: \"Your next client\\nis waiting\\nfor a reply.\" Small kicker: \"AI + OUTREACH\". Small footer CTA: \"Book a 20-minute workflow review\". No other words, logos, statistics, watermarks, fake screenshots or invented brand. Portrait social poster 4:5, generous safe margins, very legible."
+    ],
+    [
+      "02_ai_workflow_hook",
+      "A beautiful sculptural lime green path joining three abstract frosted glass blocks, warm off-white background, subtle cobalt accents and high-end studio shadows, premium modern editorial consultancy campaign. Headline in deep navy large upper half exactly: \"Give your AI\\na useful\\nnext step.\" Small kicker \"AI + OUTREACH\". Small footer CTA exactly \"Book a 20-minute workflow review\". No other words, no fake data, no logos, no watermark. Portrait social poster 4:5, striking readable typography, generous safe margins. This is metaphorical brand imagery, not a technical diagram."
+    ],
+    [
+      "03_reach_hook",
+      "A small luminous lime sphere creating a spreading field of elegant cobalt and pale lilac concentric ripples on an ink navy studio surface, premium conceptual 3D editorial imagery for outreach consultancy. Headline large warm white in upper half exactly \"Reach the\\nright people.\\nStart better\\nconversations.\" Small kicker \"AI + OUTREACH\". Small footer CTA \"Book a 20-minute workflow review\". No other words, no logos, no figures, no watermark. Portrait 4:5 social poster, bold clean typography and generous safe margins."
+    ],
+    [
+      "04_booking_hook",
+      "A sculptural cobalt door standing open on a warm off-white studio floor, lime light spilling through onto a rounded abstract calendar tile with no dates and a single elegant check mark, premium 3D editorial consultancy campaign, generous negative space. Large deep navy headline in upper half exactly \"Make it easy\\nto take the\\nnext step.\" Small kicker \"AI + OUTREACH\". Small footer CTA exactly \"Book a 20-minute workflow review\". No other words, no logos, no statistics, no watermark. Portrait social poster 4:5, legible and polished."
+    ]
+  ],
+  "additional": [
+    [
+      "05_response_owner",
+      "Who owns the next reply?",
+      "a frosted glass message envelope resting on a small cobalt pedestal with a lime spotlight",
+      "navy",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "06_one_lead",
+      "Follow one enquiry.\\nFind the gaps.",
+      "an elegant sculptural chrome magnifying glass framing one glowing lime sphere among frosted spheres",
+      "cream",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "07_human_handoff",
+      "Good AI knows\\nwhen to hand over.",
+      "two abstract sculptural hands in cobalt and pale ceramic exchanging one lime sphere, tasteful conceptual not realistic human hands",
+      "cream",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "08_start_small",
+      "Start with\\none useful\\nworkflow.",
+      "one beautiful cobalt domino tile standing upright in a lime circle of light on a studio surface",
+      "navy",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "09_relevance",
+      "Give people\\na reason\\nto reply.",
+      "one lime message-shaped sculptural object among a few frosted neutral envelopes, premium studio scene",
+      "cream",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "10_useful_followup",
+      "Make your\\nfollow-up\\nuseful.",
+      "an open cobalt envelope holding a small luminous lime star sculpture, warm studio lighting",
+      "navy",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "11_measure",
+      "Measure the\\nconversations\\nthat matter.",
+      "three elegant frosted glass speech bubbles clustered around one bright lime orb, conceptual studio photograph with no charts",
+      "navy",
+      "Book a 20-minute workflow review"
+    ],
+    [
+      "12_review",
+      "Bring one\\nworkflow.\\nLeave with\\na next step.",
+      "an elegant cobalt notebook open on a warm cream studio table, one lime ribbon bookmark and pen, no writing on notebook",
+      "cream",
+      "Book a 20-minute workflow review"
+    ]
+  ]
+}

@@ -1,0 +1,29 @@
+﻿Day,Date,Weekday,Week,Theme,Email action,Social content,Suggested social time America/New_York,Execution task,Owner,Status
+1,2026-09-21,Monday,1,Enquiry follow-up,W1 or C1,P01,10:00,Launch small eligible cohort; send W1 or C1; verify deliveries and replies,Emmanuel or assigned owner,Planned
+2,2026-09-22,Tuesday,1,Enquiry follow-up,No scheduled sequence email,S01,12:00,Review responses and suppressions; record R01 with dummy records,Emmanuel or assigned owner,Planned
+3,2026-09-23,Wednesday,1,Enquiry follow-up,No scheduled sequence email,P02,10:00,Check source capture and owner assignments; respond to enquiries,Emmanuel or assigned owner,Planned
+4,2026-09-24,Thursday,1,Enquiry follow-up,No scheduled sequence email,R01,12:00,Publish R01; test booking and reminders with a controlled record,Emmanuel or assigned owner,Planned
+5,2026-09-25,Friday,1,Enquiry follow-up,W2 or C2,P03,10:00,Send W2 or C2 to eligible non-responders; review initial delivery,Emmanuel or assigned owner,Planned
+6,2026-09-26,Saturday,1,Enquiry follow-up,No scheduled sequence email,S02,12:00,Monitor inbound enquiries; answer Story responses,Emmanuel or assigned owner,Planned
+7,2026-09-27,Sunday,1,Enquiry follow-up,No scheduled sequence email,Community monitoring or review,,"Review week 1 delivery, positive replies and bookings; plan fixes",Emmanuel or assigned owner,Planned
+8,2026-09-28,Monday,2,Useful agentic AI,No scheduled sequence email,P04,10:00,Review AI scope; prepare tested demonstration,Emmanuel or assigned owner,Planned
+9,2026-09-29,Tuesday,2,Useful agentic AI,No scheduled sequence email,S03,12:00,Record R02; test unavailable slot and handoff paths,Emmanuel or assigned owner,Planned
+10,2026-09-30,Wednesday,2,Useful agentic AI,No scheduled sequence email,P05,10:00,Review ten or all available AI conversations; fix one issue,Emmanuel or assigned owner,Planned
+11,2026-10-01,Thursday,2,Useful agentic AI,No scheduled sequence email,R02,12:00,Publish R02; hold booked reviews and send recaps,Emmanuel or assigned owner,Planned
+12,2026-10-02,Friday,2,Useful agentic AI,W3 or C3,P06,10:00,Send W3 or C3 to eligible non-responders; check stopping rules,Emmanuel or assigned owner,Planned
+13,2026-10-03,Saturday,2,Useful agentic AI,No scheduled sequence email,S04,12:00,Answer Story questions; check next week capacity,Emmanuel or assigned owner,Planned
+14,2026-10-04,Sunday,2,Useful agentic AI,No scheduled sequence email,Community monitoring or review,,"Review week 2 reply quality, bookings and AI failures",Emmanuel or assigned owner,Planned
+15,2026-10-05,Monday,3,Relevant outreach,No scheduled sequence email,P07,10:00,Review audience relevance and common objections,Emmanuel or assigned owner,Planned
+16,2026-10-06,Tuesday,3,Relevant outreach,No scheduled sequence email,S05,12:00,Record R03; prepare fictional outreach example,Emmanuel or assigned owner,Planned
+17,2026-10-07,Wednesday,3,Relevant outreach,No scheduled sequence email,P08,10:00,Deliver reviews; send requested proposals and next actions,Emmanuel or assigned owner,Planned
+18,2026-10-08,Thursday,3,Relevant outreach,No scheduled sequence email,R03,12:00,Publish R03; check attribution on new enquiries,Emmanuel or assigned owner,Planned
+19,2026-10-09,Friday,3,Relevant outreach,No scheduled sequence email,P09,10:00,Review follow-up usefulness and prospect fit; no extra sequence email,Emmanuel or assigned owner,Planned
+20,2026-10-10,Saturday,3,Relevant outreach,No scheduled sequence email,S06,12:00,Answer Story questions; monitor inbound requests,Emmanuel or assigned owner,Planned
+21,2026-10-11,Sunday,3,Relevant outreach,No scheduled sequence email,Community monitoring or review,,"Review week 3 attendance, proposal requests and remaining capacity",Emmanuel or assigned owner,Planned
+22,2026-10-12,Monday,4,Booking and outcomes,W4 or C4,P10,10:00,Send final W4 or C4 to eligible non-responders,Emmanuel or assigned owner,Planned
+23,2026-10-13,Tuesday,4,Booking and outcomes,No scheduled sequence email,S07,12:00,Record R04; test cancellation and rescheduling demonstration,Emmanuel or assigned owner,Planned
+24,2026-10-14,Wednesday,4,Booking and outcomes,No scheduled sequence email,P11,10:00,Review outcome data; update opportunities and costs,Emmanuel or assigned owner,Planned
+25,2026-10-15,Thursday,4,Booking and outcomes,No scheduled sequence email,R04,12:00,Publish R04; conduct reviews and requested proposal follow-ups,Emmanuel or assigned owner,Planned
+26,2026-10-16,Friday,4,Booking and outcomes,No scheduled sequence email,P12,10:00,Publish final invitation; no invented scarcity,Emmanuel or assigned owner,Planned
+27,2026-10-17,Saturday,4,Booking and outcomes,No scheduled sequence email,S08,12:00,Answer Story questions; reconcile duplicate and rescheduled meetings,Emmanuel or assigned owner,Planned
+28,2026-10-18,Sunday,4,Booking and outcomes,No scheduled sequence email,Community monitoring or review,,Report results; close sequences; retain only requested future follow-up tasks,Emmanuel or assigned owner,Planned

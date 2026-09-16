@@ -1,0 +1,17 @@
+# Source material too large for GitHub (100 MB hard limit per file)
+About.pdf
+About.docx
+GoHighLevel_Four_Week_Campaign.docx
+GoHighLevel_Campaign_Kit/GoHighLevel_Four_Week_Campaign.docx
+
+# Local scratch
+*.tmp
+.DS_Store
+
+# Internal — never publish. Local copies only.
+TALKING_POINTS.html
+PROJECT_REPORT.html
+PROJECT_REPORT.md
+site/notes/
+site/report/
+site/files/PROJECT_REPORT.md

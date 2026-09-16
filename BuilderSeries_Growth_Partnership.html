@@ -1,0 +1,720 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Builder Series — Growth Partnership</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#08161E;
+  --ink-2:#123039;
+  --ivory:#F3EFE4;
+  --dim:rgba(243,239,228,.60);
+  --dimmer:rgba(243,239,228,.38);
+  --lime:#A9D046;
+  --brass:#D8A64E;
+  --rule:rgba(243,239,228,.13);
+  --serif:"Bodoni Moda",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(28px,5.5vw,104px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:var(--ink);
+  background-image:
+    radial-gradient(120% 90% at 12% 0%, #163B48 0%, rgba(22,59,72,0) 58%),
+    radial-gradient(90% 80% at 100% 100%, #0D2833 0%, rgba(13,40,51,0) 60%);
+  background-attachment:fixed;
+  color:var(--ivory);
+  font-family:var(--sans);
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+
+/* ---------- deck shell ---------- */
+.deck{position:relative;height:100dvh;width:100%}
+.slide{
+  position:absolute;inset:0;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  padding:calc(var(--pad) * .85) var(--pad) calc(var(--pad) * .95);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.slide.on{display:flex;animation:settle .42s cubic-bezier(.2,.7,.3,1) both}
+@keyframes settle{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.slide.on{animation:none}}
+
+.inner{width:100%;max-width:1180px;margin:0 auto}
+
+/* ---------- ribbon progress ---------- */
+.ribbon{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(243,239,228,.09);z-index:40}
+.ribbon i{display:block;height:100%;width:0;background:var(--lime);box-shadow:0 0 18px rgba(169,208,70,.5);transition:width .42s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){.ribbon i{transition:none}}
+
+.footrow{
+  position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);
+  z-index:41;padding:0 var(--pad);pointer-events:none;
+}
+.footrow>div{
+  max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.hud{
+  pointer-events:auto;display:flex;align-items:center;gap:14px;
+  font-family:var(--sans);font-size:11px;letter-spacing:.14em;color:var(--dimmer);
+  font-variant-numeric:tabular-nums;
+}
+.hud b{color:var(--ivory);font-weight:600}
+.hud button{
+  background:none;border:1px solid var(--rule);color:var(--dimmer);
+  font:inherit;letter-spacing:.14em;padding:5px 10px;border-radius:2px;cursor:pointer;
+}
+.hud button:hover{color:var(--ivory);border-color:rgba(243,239,228,.35)}
+.hud button:focus-visible,a:focus-visible,.gcell:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+.mark{font-size:11px;letter-spacing:.16em;color:var(--dimmer)}
+
+/* ---------- type ---------- */
+.eyebrow{
+  font-family:var(--sans);font-size:clamp(10px,1vw,12px);font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin:0 0 clamp(18px,2.4vw,30px);
+}
+h1,h2,.fig,.ledger .num.money{
+  /* Hold Bodoni at a text optical size so the hairlines stay solid on a dark ground */
+  font-optical-sizing:none;
+  font-variation-settings:"opsz" 11;
+}
+h1{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(38px,6.4vw,88px);line-height:1.04;letter-spacing:-.018em;
+  margin:0 0 .4em;max-width:17ch;
+}
+h2{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(28px,4vw,52px);line-height:1.1;letter-spacing:-.014em;
+  margin:0 0 clamp(20px,2.6vw,34px);max-width:22ch;
+}
+h3{
+  font-family:var(--sans);font-weight:600;font-size:clamp(15px,1.35vw,19px);
+  letter-spacing:-.005em;margin:0 0 8px;
+}
+p{font-size:clamp(14px,1.18vw,18px);line-height:1.62;color:var(--dim);margin:0 0 1em;max-width:62ch}
+p.lead{color:var(--ivory);font-size:clamp(16px,1.5vw,22px);line-height:1.5;max-width:52ch}
+strong{color:var(--ivory);font-weight:600}
+em.n{font-style:normal;color:var(--brass);font-variant-numeric:tabular-nums}
+.serif-quote{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* ---------- cover ---------- */
+.cover h1{max-width:15ch;margin-bottom:.5em}
+.cover .rule{width:120px;height:2px;background:var(--lime);margin:0 0 30px}
+.coverfoot{display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);margin-top:clamp(30px,5vw,64px)}
+.coverfoot div{min-width:160px}
+.coverfoot span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer);margin-bottom:7px}
+.coverfoot b{font-weight:500;font-size:clamp(14px,1.2vw,17px);color:var(--ivory)}
+
+/* ---------- stat wall ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(22px,3vw,44px);margin-top:clamp(14px,2vw,26px)}
+.stat .fig{
+  font-family:var(--serif);font-weight:500;color:var(--brass);
+  font-size:clamp(42px,5.4vw,76px);line-height:.95;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block;margin-bottom:12px;
+}
+.stat .cap{font-size:clamp(12.5px,1.05vw,15px);line-height:1.45;color:var(--dim);max-width:24ch}
+.stat{border-top:1px solid var(--rule);padding-top:20px}
+
+/* ---------- ledger ---------- */
+.ledger{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ledger caption{text-align:left;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer);padding-bottom:16px}
+.ledger th{
+  text-align:left;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dimmer);padding:0 16px 12px 0;border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+.ledger td{padding:16px 16px 16px 0;border-bottom:1px solid var(--rule);font-size:clamp(13px,1.1vw,16.5px);color:var(--dim);vertical-align:top;line-height:1.45}
+.ledger td:first-child{color:var(--ivory);font-weight:500}
+.ledger .num,.ledger th.num{text-align:right;padding-left:clamp(20px,2.4vw,40px);padding-right:0;color:var(--ivory);font-weight:500;white-space:nowrap}
+.ledger .num.money{color:var(--brass);font-family:var(--serif);font-size:clamp(17px,1.7vw,25px);font-weight:500}
+.ledger tr.pick td{background:rgba(169,208,70,.065)}
+.ledger tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--lime);padding-left:18px}
+.ledger tr.pick .num.money{font-size:clamp(24px,2.6vw,40px);color:var(--lime)}
+/* beats .ledger td:first-child, which would otherwise make footnotes ivory */
+.ledger tfoot td,.ledger tfoot td:first-child{
+  border-bottom:none;padding-top:18px;color:var(--dimmer);font-size:12.5px;font-weight:400;line-height:1.55;
+}
+.tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);border:1px solid rgba(169,208,70,.45);border-radius:2px;padding:3px 7px;margin-left:10px;vertical-align:2px;font-weight:600}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---------- leak list ---------- */
+.leaks{list-style:none;margin:0;padding:0;display:grid;gap:clamp(18px,2.4vw,30px)}
+.leaks li{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;border-left:2px solid var(--rule);padding-left:clamp(18px,2.2vw,28px)}
+.leaks li.hot{border-left-color:var(--lime)}
+.leaks h3{margin-bottom:5px}
+.leaks p{margin:0;max-width:70ch}
+
+/* ---------- engine diagram ---------- */
+.engine{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:clamp(10px,2vw,22px)}
+.engine div{background:rgba(8,22,30,.55);padding:clamp(18px,2.2vw,26px);backdrop-filter:blur(2px)}
+.engine .step{font-family:var(--serif);font-size:13px;color:var(--lime);display:block;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.engine h3{font-size:clamp(14px,1.2vw,17px);margin-bottom:7px}
+.engine p{font-size:clamp(12px,1vw,14.5px);line-height:1.5;margin:0}
+
+/* ---------- two-col ---------- */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(26px,4vw,64px);align-items:start}
+.two.narrow{gap:clamp(22px,3vw,44px)}
+
+/* ---------- proof strip ---------- */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:clamp(10px,1.4vw,18px);margin-top:clamp(16px,2.4vw,28px)}
+.strip figure{margin:0}
+.strip img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:2px}
+.strip figcaption{font-size:11px;color:var(--dimmer);margin-top:9px;letter-spacing:.04em;line-height:1.4}
+
+/* ---------- checklist ---------- */
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.checks li{position:relative;padding-left:26px;font-size:clamp(13px,1.1vw,16px);line-height:1.5;color:var(--dim)}
+.checks li::before{content:"";position:absolute;left:0;top:.6em;width:11px;height:1px;background:var(--lime)}
+.checks li b{color:var(--ivory);font-weight:600}
+.checks.muted li::before{background:var(--dimmer)}
+
+/* the plain-English point of each slide — set apart by voice, not by a label */
+.sofw{
+  margin-top:clamp(20px,2.8vw,36px);
+  border-left:2px solid var(--lime);
+  padding-left:clamp(16px,1.9vw,24px);
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(15px,1.5vw,21px);line-height:1.45;color:var(--ivory);
+  max-width:56ch;
+}
+
+/* ---------- close ---------- */
+.close h1{max-width:19ch}
+.askbox{border:1px solid var(--rule);border-left:3px solid var(--lime);padding:clamp(22px,3vw,34px);max-width:640px;margin-top:clamp(18px,2.4vw,30px)}
+.askbox p:last-child{margin-bottom:0}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:clamp(12.5px,1.05vw,15px)}
+.links a{color:var(--lime);text-decoration:none;border-bottom:1px solid rgba(169,208,70,.35);padding-bottom:1px}
+.links a:hover{border-bottom-color:var(--lime)}
+
+/* ---------- sources ---------- */
+.srcs{columns:2;column-gap:clamp(28px,4vw,60px);font-size:12px;line-height:1.7;color:var(--dimmer)}
+.srcs a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--rule)}
+.srcs a:hover{color:var(--lime);border-color:var(--lime)}
+.srcs p{font-size:12px;line-height:1.7;color:var(--dimmer);max-width:none;break-inside:avoid;margin:0 0 .85em}
+
+/* ---------- overview grid ---------- */
+.grid{position:fixed;inset:0;z-index:60;background:rgba(6,17,23,.97);padding:calc(env(safe-area-inset-top,0px) + 28px) 28px 28px;overflow-y:auto}
+.gwrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;max-width:1200px;margin:0 auto}
+.gcell{border:1px solid var(--rule);background:rgba(18,48,57,.4);padding:16px;text-align:left;cursor:pointer;color:var(--ivory);font-family:var(--sans);border-radius:2px}
+.gcell:hover{border-color:var(--lime)}
+.gcell span{display:block;font-size:10px;letter-spacing:.14em;color:var(--dimmer);margin-bottom:9px;font-variant-numeric:tabular-nums}
+.gcell b{font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.2;display:block}
+.gtitle{max-width:1200px;margin:0 auto 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer)}
+
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+  body{overflow:auto}
+  .deck{height:auto}
+  .slide{position:static;display:flex!important;animation:none;min-height:auto;padding:56px 20px;border-bottom:1px solid var(--rule)}
+  .footrow{display:none}
+  .ribbon{display:none}
+  .srcs{columns:1}
+  h1{max-width:none}
+  h2{max-width:none}
+}
+
+/* ---------- print / PDF ---------- */
+@media print{
+  html,body{overflow:visible;background:#08161E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .deck{height:auto}
+  .slide{position:static;display:flex!important;animation:none;height:180mm;page-break-after:always;break-after:page;padding:14mm;overflow:hidden}
+  .footrow,.ribbon,.grid{display:none!important}
+  @page{size:297mm 190mm;margin:0}
+}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+<!-- 1 ─ cover -->
+<section class="slide cover" data-title="Rooms to revenue">
+  <div class="inner">
+    <p class="eyebrow">Growth partnership · September 2026</p>
+    <div class="rule"></div>
+    <h1>Your room is worth more than the door.</h1>
+    <p class="lead">A 90-day plan to turn 60,000 Builder Series members from an audience into a book of business — without changing a single thing about how you curate the room.</p>
+    <div class="coverfoot">
+      <div><span>Prepared for</span><b>Dylan Oriundo</b></div>
+      <div><span>The Builder Series</span><b>New York City</b></div>
+      <div><span>Prepared by</span><b>Emmanuel Olimi Kasigazi</b></div>
+      <div><span>Read time</span><b>7 minutes</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 ─ TLDR -->
+<section class="slide" data-title="The 60-second version">
+  <div class="inner">
+    <p class="eyebrow">If you read one slide</p>
+    <h2>You sell $20–$60 tickets into rooms that hold billions.</h2>
+    <div class="two">
+      <div>
+        <p>The ticket is the smallest number in the building. The relationships, the intent data, and the fact that 60,000 founders already trust your judgement — that is the asset, and right now none of it is captured, followed up, or sold into.</p>
+        <p>We build the machinery underneath The Builder Series: one contact list that remembers every RSVP, AI that answers every message within seconds, and a fixed-price growth service you can sell to your own members at 60–80% margin.</p>
+      </div>
+      <div>
+        <ul class="checks">
+          <li><b>Month 1</b> — Build the engine. Reactivate the database you already own.</li>
+          <li><b>Month 2</b> — Launch growth packages, branded as yours, to your founders.</li>
+          <li><b>Month 3</b> — Train your team, hand over the written playbook, step back.</li>
+          <li><b>Your time</b> — Two hours a week. We execute, you approve.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 ─ what you've built -->
+<section class="slide" data-title="What you already own">
+  <div class="inner">
+    <p class="eyebrow">The asset</p>
+    <h2>Most people spend a decade trying to build what you built in twelve months.</h2>
+    <div class="stats">
+      <div class="stat"><span class="fig">60k+</span><span class="cap">Members across Luma, LinkedIn, Instagram, WhatsApp, TikTok and beehiiv</span></div>
+      <div class="stat"><span class="fig">$3B</span><span class="cap">Capital in a single room, at a single event, on a single night</span></div>
+      <div class="stat"><span class="fig">4–6</span><span class="cap">Curated NYC rooms a month — dinners, mixers, run club, deployment rooms</span></div>
+      <div class="stat"><span class="fig">160</span><span class="cap">RSVPs to one June event, with six active funds now programming against you</span></div>
+    </div>
+    <p style="margin-top:clamp(22px,3vw,38px);max-width:70ch">Founders, operators and investors who ship show up week after week. That is distribution most venture-backed companies would pay millions to rent — and you own it outright.</p>
+    <p class="sofw">You don't need a bigger community. You need a way to charge the one you already have.</p>
+  </div>
+</section>
+
+<!-- 4 ─ the gap -->
+<section class="slide" data-title="The math you're leaving">
+  <div class="inner">
+    <p class="eyebrow">The gap</p>
+    <h2>One sold-out night. Two very different numbers.</h2>
+    <div class="scroller">
+      <table class="ledger">
+        <caption>Illustrative, based on your published events and NYC sponsorship benchmarks</caption>
+        <thead><tr><th>Revenue line</th><th>How it's priced today</th><th class="num">Per event</th></tr></thead>
+        <tbody>
+          <tr><td>160 RSVPs at the door</td><td>$20–$60 ticket, paid by the guest</td><td class="num money">~$8,000</td></tr>
+          <tr class="pick"><td>Title sponsor of the same room<span class="tag">Unsold</span></td><td>Benchmark for a 150-person NYC startup event</td><td class="num money">$15,000–25,000</td></tr>
+          <tr><td>The attendees themselves</td><td>No offer exists, so nothing is captured</td><td class="num money">$0</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">Sponsorship range from EMRG Media's 2026 NYC conference pricing guidance. Ticket figure uses your own published RSVP count and price band.</td></tr></tfoot>
+      </table>
+    </div>
+    <p style="margin-top:clamp(20px,2.6vw,34px);max-width:64ch">The door pays for the venue. Everything above it is currently unpriced — which means the room is subsidising the people who benefit most from being in it.</p>
+    <p class="sofw">Two sponsors a month would out-earn every ticket you've ever sold.</p>
+  </div>
+</section>
+
+<!-- 5 ─ the leaks -->
+<section class="slide" data-title="Three leaks">
+  <div class="inner">
+    <p class="eyebrow">Why it happens</p>
+    <h2>Nothing is broken. Three things are simply missing.</h2>
+    <ul class="leaks">
+      <li class="hot">
+        <h3>An RSVP is not a contact</h3>
+        <p>Names sit in Luma, beehiiv, WhatsApp and LinkedIn, and none of them talk to each other. Nobody can answer "who came twice, who's raising, who's hiring" — so nobody can sell to them.</p>
+      </li>
+      <li class="hot">
+        <h3>Follow-up depends on you remembering</h3>
+        <p>Every partnership enquiry, sponsor question and DM routes to one inbox and one person. The ones you don't get to aren't lost loudly. They just go quiet.</p>
+      </li>
+      <li class="hot">
+        <h3>Your members buy growth help — from someone else</h3>
+        <p>27% of small businesses still have no real web presence, and 27% of them are actively shopping for a marketing provider. Your founders are in that market right now. You introduced them to each other; you just don't have anything to sell them.</p>
+      </li>
+    </ul>
+    <p class="sofw">All three are one-time setups. None of them become another thing you have to keep up with.</p>
+  </div>
+</section>
+
+<!-- 6 ─ thesis -->
+<section class="slide" data-title="The thesis">
+  <div class="inner">
+    <p class="eyebrow">The thesis</p>
+    <h1 style="max-width:16ch">60,000 members is not an audience. It's a book of business.</h1>
+    <p class="lead">An audience is monetised by attention — tickets, sponsorships, impressions. A book of business is monetised by <span class="serif-quote">recurring relationships</span>. You already have the trust. What's missing is the system that turns it into revenue while you sleep.</p>
+  </div>
+</section>
+
+<!-- 7 ─ the engine -->
+<section class="slide" data-title="What we build">
+  <div class="inner">
+    <p class="eyebrow">The engine</p>
+    <h2>One system. Built in weeks, not quarters.</h2>
+    <div class="engine">
+      <div>
+        <span class="step">01</span>
+        <h3>Capture</h3>
+        <p>Every RSVP, DM, form and referral lands in one list that records who they are, where they came from and every event they attended. A short quiz on your site turns browsers into names you can actually reach.</p>
+      </div>
+      <div>
+        <span class="step">02</span>
+        <h3>Answer</h3>
+        <p>An assistant that only knows what you have approved replies across Instagram, WhatsApp, email and text in seconds — and passes it to a real person the moment someone asks for one.</p>
+      </div>
+      <div>
+        <span class="step">03</span>
+        <h3>Convert</h3>
+        <p>Membership, sponsor and package enquiries move through named stages with someone responsible at each one. Meetings land on a calendar instead of dying in a thread.</p>
+      </div>
+      <div>
+        <span class="step">04</span>
+        <h3>Sell again</h3>
+        <p>Attendance and interest data drive the next offer: membership upgrade, sponsor renewal, or a growth package for their own company.</p>
+      </div>
+    </div>
+    <p style="margin-top:clamp(20px,2.6vw,32px);max-width:66ch">Built on GoHighLevel and branded entirely as yours. Your members never see another company's logo.</p>
+    <p class="sofw">Once it's switched on, it keeps working whether or not you open your laptop.</p>
+  </div>
+</section>
+
+<!-- 8 ─ line 1 -->
+<section class="slide" data-title="Line 1 · Reactivate">
+  <div class="inner">
+    <p class="eyebrow">Revenue line 01 · Month one</p>
+    <h2>The cheapest leads you will ever get are the ones you already have.</h2>
+    <div class="two">
+      <div>
+        <p>This is a proper campaign to the people already in your world — past RSVPs, no-shows, newsletter subscribers, anyone who enquired and went quiet. Across the industry <em class="n">2–6%</em> of them reply to a good email, and reaching them costs <em class="n">60–80%</em> less than finding someone new.</p>
+        <p>We run this in week two, on a list you already own, before you've spent a dollar finding anyone new. It is the fastest proof the whole thing works.</p>
+        <p class="sofw">This is money from people who already said yes to you once.</p>
+      </div>
+      <div class="scroller">
+        <table class="ledger">
+          <caption>Deliberately conservative model — not a forecast</caption>
+          <tbody>
+            <tr><td>Contactable, consented members</td><td class="num">10,000</td></tr>
+            <tr><td>Reply at 3% (low end of benchmark)</td><td class="num">300</td></tr>
+            <tr><td>Book a call at 10% of repliers</td><td class="num">30</td></tr>
+            <tr class="pick"><td>Close 12 at the $500 entry package</td><td class="num money">$6,000/mo</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="2">Annualised: $72,000 recurring, from contacts you already paid to acquire. List size is confirmed in week one and the model is rebuilt on real numbers.</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 ─ line 2 -->
+<section class="slide" data-title="Line 2 · Builder GTM">
+  <div class="inner">
+    <p class="eyebrow">Revenue line 02 · Month two</p>
+    <h2>Sell your founders the thing they're already buying.</h2>
+    <p style="max-width:72ch">A fixed-price growth service, branded Builder Series, delivered by me under your name. Priced deliberately below the NYC market so it sells on trust inside the community rather than on a cold pitch.</p>
+    <div class="scroller">
+      <table class="ledger" style="margin-top:8px">
+        <thead><tr><th>Package</th><th>What the member gets</th><th class="num">Their price</th><th class="num">NYC market rate</th></tr></thead>
+        <tbody>
+          <tr><td>Signal</td><td>5 branded posts a week, comments answered automatically by DM, a free guide that captures leads, missed calls texted back, mobile app</td><td class="num money">$500</td><td class="num">$1,000–1,500</td></tr>
+          <tr class="pick"><td>Engine<span class="tag">Core</span></td><td>Everything in Signal, plus their contact system built, an AI assistant answering enquiries, a lead-capture quiz, two automations, and a campaign to their old leads</td><td class="num money">$1,500</td><td class="num">$2,500–4,000</td></tr>
+          <tr><td>Partner</td><td>Everything in Engine, plus an AI receptionist answering the phone, outreach to new prospects, and a monthly growth review with a named person</td><td class="num money">$3,000</td><td class="num">$4,500–7,500</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="4">Market rates from 2026 US social and growth-agency pricing surveys. All prices monthly; software and usage billed separately and transparently.</td></tr></tfoot>
+      </table>
+    </div>
+    <p style="margin-top:clamp(18px,2.4vw,28px);max-width:66ch"><strong>Forty members on Engine is $60,000 a month.</strong> That is fewer than one in a thousand of your community saying yes.</p>
+    <p class="sofw">You're not selling anything new. You're charging for the introduction you already make for free.</p>
+  </div>
+</section>
+
+<!-- 10 ─ line 3 -->
+<section class="slide" data-title="Line 3 · Reprice attention">
+  <div class="inner">
+    <p class="eyebrow">Revenue line 03</p>
+    <h2>You are selling a founder-and-VC audience at consumer prices.</h2>
+    <div class="two">
+      <div>
+        <p>Newsletter sponsors pay on who reads it, not how many. An ordinary business list earns <em class="n">$35–70</em> per thousand readers. A list that can prove its readers are founders and VPs earns <em class="n">$140–160</em>.</p>
+        <p>Your list is that list. It has simply never been segmented, evidenced or packaged — so it gets quoted like everyone else's, or given away.</p>
+        <p>We sort the list by who people actually are, build the media kit from real attendance data, and put a rate card in front of the sponsors already standing in your rooms.</p>
+        <p class="sofw">Same newsletter, same readers, same work. Different invoice.</p>
+      </div>
+      <div class="scroller">
+        <table class="ledger">
+          <caption>Same list, two rate cards</caption>
+          <tbody>
+            <tr><td>Unsegmented general B2B rate</td><td class="num money">$60 CPM</td></tr>
+            <tr class="pick"><td>Verified founder / VP+ segment</td><td class="num money">$140 CPM</td></tr>
+            <tr><td>Structured event sponsor tier</td><td class="num money">$5–15k</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="2">Newsletter CPM bands from 2026 sponsorship rate surveys. Event tier assumes a recurring-series discount against the NYC benchmark on slide four.</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 ─ line 4 -->
+<section class="slide" data-title="Line 4 · Own the software">
+  <div class="inner">
+    <p class="eyebrow">Revenue line 04 · Month three</p>
+    <h2>Stop renting software to your community. Sell it to them.</h2>
+    <div class="two">
+      <div>
+        <p>The same software running your contact system can carry your logo, your web address and your prices — and be sold to members who would rather run it themselves than have it done for them.</p>
+        <p>Your cost is a single agency plan. Every seat above that is margin, billed automatically, with no engineering and no support burden on your team.</p>
+        <p>For members who'd rather buy direct, the platform's partner programme pays you <em class="n">40%</em> every month on every referral, for as long as they stay.</p>
+        <p class="sofw">They pay monthly, it bills itself, and nobody calls you about it.</p>
+      </div>
+      <div class="scroller">
+        <table class="ledger">
+          <caption>White-label seats · illustrative</caption>
+          <tbody>
+            <tr><td>50 members on a branded seat at $197</td><td class="num money">$9,850/mo</td></tr>
+            <tr><td>Platform cost to you</td><td class="num money">$497/mo</td></tr>
+            <tr class="pick"><td>Gross margin</td><td class="num money">~94%</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="2">Excludes SMS, email and AI usage, which are rebilled to the member with your markup.</td></tr></tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 ─ proof -->
+<section class="slide" data-title="Month one is already built">
+  <div class="inner">
+    <p class="eyebrow">Proof, not promises</p>
+    <h2 style="font-size:clamp(24px,3.3vw,44px);max-width:34ch;margin-bottom:clamp(14px,1.8vw,22px)">I didn't come to pitch you a plan. I came to show you month one, finished.</h2>
+    <div class="strip">
+      <figure><img src="GoHighLevel_Campaign_Kit/graphics/01_follow_up_hook.png" alt="Campaign graphic reading: Your next client is waiting for a reply."><figcaption>Week 1 — enquiries and follow-up gaps</figcaption></figure>
+      <figure><img src="GoHighLevel_Campaign_Kit/graphics/02_ai_workflow_hook.png" alt="Campaign graphic reading: Give your AI a useful next step."><figcaption>Week 2 — useful agentic AI</figcaption></figure>
+      <figure><img src="GoHighLevel_Campaign_Kit/graphics/03_reach_hook.png" alt="Campaign graphic reading: Reach the right people."><figcaption>Week 3 — relevant reach</figcaption></figure>
+      <figure><img src="GoHighLevel_Campaign_Kit/graphics/04_booking_hook.png" alt="Campaign graphic reading: Make it easy to take the next step."><figcaption>Week 4 — easy booking</figcaption></figure>
+    </div>
+    <div class="two narrow" style="margin-top:clamp(20px,2.6vw,32px)">
+      <ul class="checks">
+        <li><b>12 finished campaign graphics</b> with Instagram and LinkedIn captions written per channel</li>
+        <li><b>A 28-day execution calendar</b> with daily actions, owners and time budgets</li>
+        <li><b>Eight email sequences</b> plus reply, booking, reminder and no-show scripts</li>
+      </ul>
+      <ul class="checks">
+        <li><b>Six workflow specifications</b> covering reply handling, suppression and attendance</li>
+        <li><b>A tested AI assistant brief</b> with ten pre-launch failure cases</li>
+        <li><b>Nothing sent or published</b> — it waits for your approval and your brand</li>
+      </ul>
+    </div>
+    <p class="sofw">If you said yes on Monday, week one is already written.</p>
+  </div>
+</section>
+
+<!-- 13 ─ 90 days -->
+<section class="slide" data-title="The 90 days">
+  <div class="inner">
+    <p class="eyebrow">The plan</p>
+    <h2>Ninety days from signature to something your operators can run without me.</h2>
+    <div class="engine">
+      <div>
+        <span class="step">Month 01</span>
+        <h3>Build and prove</h3>
+        <p>Contact system, sales stages and calendars live. Everyone imported, cleaned and consent-checked. The AI assistant tested and switched on. The campaign to your old contacts goes out. First revenue lands inside thirty days.</p>
+      </div>
+      <div>
+        <span class="step">Month 02</span>
+        <h3>Package and sell</h3>
+        <p>The three Builder packages built, priced and made real: sales page, sign-up quiz, onboarding, delivery. First members signed up and delivered for, under your brand.</p>
+      </div>
+      <div>
+        <span class="step">Month 03</span>
+        <h3>Hand over</h3>
+        <p>Your operators and event hosts trained. Written instructions, the AI prompt library and the dashboards handed over. Then I stay on, or I step back entirely — your call, made with three months of real numbers in front of you.</p>
+      </div>
+    </div>
+    <p class="sofw">By day ninety this belongs to your team, not to me.</p>
+  </div>
+</section>
+
+<!-- 14 ─ the ask -->
+<section class="slide" data-title="The ask">
+  <div class="inner">
+    <p class="eyebrow">The ask</p>
+    <h2 style="font-size:clamp(26px,3.5vw,46px);max-width:30ch;margin-bottom:clamp(16px,2vw,26px)">Here is what this costs in New York. Here is what I'm asking you for.</h2>
+    <div class="scroller">
+      <table class="ledger">
+        <thead><tr><th>Who you could hire</th><th>What you'd actually get</th><th class="num">Per month</th></tr></thead>
+        <tbody>
+          <tr><td>Fractional growth lead</td><td>Advice, 10–20 hours a week. You still have to build all of it.</td><td class="num money">$8,000–25,000</td></tr>
+          <tr><td>Full-service growth agency</td><td>Delivery, but they own the strategy and you own the invoice.</td><td class="num money">$4,500–15,000</td></tr>
+          <tr><td>Social media manager</td><td>Posts. Nothing behind them to catch the people who respond.</td><td class="num money">$1,000–5,000</td></tr>
+          <tr class="pick"><td>Emmanuel<span class="tag">3 months</span></td><td>The strategy and the build. All four revenue lines, your team trained, everything handed over.</td><td class="num money">$1,500</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">$4,500 for the full three months. Software and usage billed separately at cost. No lock-in, no notice period.</td></tr></tfoot>
+      </table>
+    </div>
+    <p style="margin-top:clamp(16px,2vw,26px);max-width:76ch">That's not the market rate and I'm not pretending it is — the table above is. I'm asking for a fraction because I know you, and I'd rather have the case study and the room than the margin. This is the rate for the first three months, and it's this rate because it's you.</p>
+    <p class="sofw">I'm charging you exactly what one of your members will pay for the package I'm building for you to sell them.</p>
+  </div>
+</section>
+
+<!-- 16 ─ what we need / don't touch -->
+<section class="slide" data-title="Terms of engagement">
+  <div class="inner">
+    <p class="eyebrow">How we work</p>
+    <h2>Your judgement about the room is the product. I won't go near it.</h2>
+    <div class="two">
+      <div>
+        <h3 style="margin-bottom:16px">What I need from you</h3>
+        <ul class="checks">
+          <li>Your contact lists, with an honest note on <b>who agreed to be emailed</b></li>
+          <li>An email address to send from, and one calendar I can set up</li>
+          <li><b>Two hours a week</b> — approvals, not meetings</li>
+          <li>Permission to write in the Builder Series voice, with you holding final sign-off</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="margin-bottom:16px">What I won't touch</h3>
+        <ul class="checks muted">
+          <li>Who gets into the room, or how you curate it</li>
+          <li>Ticket pricing, without your explicit approval</li>
+          <li>Anyone who hasn't consented to be contacted</li>
+          <li>Testimonials, logos or results that aren't real — the campaign kit says this in writing, and so do I</li>
+        </ul>
+      </div>
+    </div>
+    <p style="margin-top:clamp(20px,2.6vw,30px);max-width:70ch">Every message follows US email law, anyone who asks to come off the list comes off that day, and nothing goes to a cold list until we have confirmed we are allowed to send it. In a community built on trust, the rule-following is the strategy.</p>
+    <p class="sofw">You keep doing the part only you can do. I handle the plumbing.</p>
+  </div>
+</section>
+
+<!-- 17 ─ close -->
+<section class="slide close" data-title="The ask">
+  <div class="inner">
+    <p class="eyebrow">Next step</p>
+    <h1 style="font-size:clamp(30px,4.4vw,58px);max-width:22ch;margin-bottom:.45em">One working session. Thirty minutes. Bring your Luma export.</h1>
+    <p class="lead">We'll pull the real list size, check consent, and rebuild the model on your actual numbers instead of my conservative ones. You'll leave the call knowing what month one is worth — whether or not you hire me.</p>
+    <div class="askbox">
+      <p style="color:var(--ivory);margin-bottom:10px"><strong>Emmanuel Olimi Kasigazi</strong> — New York, NY</p>
+      <p style="margin-bottom:12px">13+ years building and scaling a B2B firm that served 300+ clients across five countries. Antler founder-in-residence, NSF I-Corps entrepreneurial lead, finishing an M.S. in Data Analytics at Yeshiva. I build the systems, and I'm twenty minutes from your rooms.</p>
+      <p class="links" style="margin-bottom:0">
+        <a href="https://calendly.com/olimiemma">Book a time — calendly.com/olimiemma</a>
+        <a href="mailto:olimiemma@gmail.com">olimiemma@gmail.com</a>
+        <a href="https://www.linkedin.com/in/olimiemma/">LinkedIn</a>
+        <a href="https://linktr.ee/olimiemma">linktr.ee/olimiemma</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 18 ─ sources -->
+<section class="slide" data-title="Assumptions & sources">
+  <div class="inner">
+    <p class="eyebrow">Appendix</p>
+    <h2 style="font-size:clamp(24px,3.2vw,40px)">Assumptions and sources</h2>
+    <p style="max-width:74ch;margin-bottom:clamp(18px,2.4vw,28px)">Every figure in this deck is either your own published number or a cited 2026 market benchmark. The revenue models are planning tools built on stated assumptions, not forecasts or guarantees. List size, consent status and conversion rates are confirmed in week one and the models rebuilt on real data.</p>
+    <div class="srcs">
+      <p>Community figures, event pricing, membership pricing and the $3B room: The Builder Series website, Luma calendar and beehiiv archive, September 2026.</p>
+      <p>Fractional CMO and VP Growth retainer bands: <a href="https://rankedcmo.com/fractional-cmo-cost">RankedCMO</a>, <a href="https://markcmo.com/blog-fractional-cmo-cost-2026">MarkCMO</a>, <a href="https://www.gofractional.com/blog/fractional-cmo-salary">GoFractional</a>, 2026.</p>
+      <p>NYC event sponsorship pricing: <a href="https://www.emrgmedia.com/conference-sponsorship-packages-nyc/">EMRG Media conference sponsorship guidance</a>, 2026.</p>
+      <p>Newsletter sponsorship CPM by audience seniority: <a href="https://www.influencerskit.com/blog/newsletter-sponsorship-pricing-rate-card-guide-2026">InfluencersKit rate card guide</a>, <a href="https://sponsorcal.com/blog/newsletter-sponsorship-pricing">SponsorCal benchmarks</a>, 2026.</p>
+      <p>Database reactivation response and recovery benchmarks: <a href="https://prestyj.com/blog/database-reactivation-response-rates-home-services-2026">Prestyj channel benchmarks</a>, <a href="https://leadsnow.ai/database-reactivation-44-percent-conversion-on-dormant-leads/">Leads Now AI case series</a>, 2026. Home-services data used directionally; a founder audience will differ.</p>
+      <p>Social and growth agency retainer rates: <a href="https://socialrails.com/blog/social-media-marketing-agency-pricing-guide">SocialRails pricing breakdown</a>, <a href="https://sproutsocial.com/insights/social-media-management-cost/">Sprout Social</a>, 2026.</p>
+      <p>White-label platform and partner economics: <a href="https://ghlexpertly.com/gohighlevel-white-label-pricing">GoHighLevel white-label plan pricing</a> and <a href="https://oneexpand.com/gohighlevel-affiliate-program/">partner programme terms</a>, 2026.</p>
+      <p>Small business web presence and marketing outsourcing demand: <a href="https://leadsagent.io/blog/businesses-without-website-statistics">LeadsAgent</a>, <a href="https://www.gtm8020.com/blog/marketing-outsourcing-statistics">GTM 8020</a>, 2026.</p>
+      <p>Quiz funnel performance: <a href="https://www.shno.co/marketing-statistics/lead-magnet-conversion-statistics">Interact benchmark data via Shno</a>, 2026. Quiz opt-in rates and landing page conversion rates measure different events and are not directly comparable; treated here as directional only.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ribbon" aria-hidden="true"><i id="bar"></i></div>
+<div class="footrow"><div>
+  <span class="mark">The Builder Series × Emmanuel Olimi Kasigazi</span>
+  <span class="hud">
+    <button id="gridbtn" aria-label="Show all slides">All slides</button>
+    <span><b id="cur">1</b> / <span id="tot">17</span></span>
+  </span>
+</div></div>
+
+<div class="grid" id="grid" hidden>
+  <div class="gtitle">All slides — click to jump, Escape to close</div>
+  <div class="gwrap" id="gwrap"></div>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var bar = document.getElementById('bar');
+  var cur = document.getElementById('cur');
+  var grid = document.getElementById('grid');
+  var gwrap = document.getElementById('gwrap');
+  var i = 0;
+  var mobile = window.matchMedia('(max-width:640px)');
+
+  document.getElementById('tot').textContent = slides.length;
+
+  slides.forEach(function(s, n){
+    var b = document.createElement('button');
+    b.className = 'gcell';
+    b.innerHTML = '<span>' + String(n+1).padStart(2,'0') + '</span><b></b>';
+    b.querySelector('b').textContent = s.dataset.title || ('Slide ' + (n+1));
+    b.addEventListener('click', function(){ closeGrid(); go(n); });
+    gwrap.appendChild(b);
+  });
+
+  function go(n){
+    if (mobile.matches) {
+      slides[Math.max(0, Math.min(n, slides.length-1))].scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
+    i = Math.max(0, Math.min(n, slides.length - 1));
+    slides.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    cur.textContent = i + 1;
+    var live = slides[i];
+    live.scrollTop = 0;
+    try { history.replaceState(null, '', '#' + (i + 1)); } catch(e){}
+  }
+
+  function openGrid(){ grid.hidden = false; }
+  function closeGrid(){ grid.hidden = true; }
+  document.getElementById('gridbtn').addEventListener('click', function(){
+    grid.hidden ? openGrid() : closeGrid();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { closeGrid(); return; }
+    if (e.key === 'g' || e.key === 'G') { grid.hidden ? openGrid() : closeGrid(); return; }
+    if (!grid.hidden) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(i - 1); }
+    else if (e.key === 'Home') { go(0); }
+    else if (e.key === 'End') { go(slides.length - 1); }
+  });
+
+  document.addEventListener('click', function(e){
+    if (mobile.matches) return;
+    if (!grid.hidden) return;
+    if (e.target.closest('a, button, .scroller, table')) return;
+    go(i + (e.clientX < window.innerWidth * 0.28 ? -1 : 1));
+  });
+
+  var x0 = null;
+  document.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (x0 === null || mobile.matches) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 55) go(i + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, {passive:true});
+
+  var start = parseInt((location.hash || '').replace('#',''), 10);
+  go(isNaN(start) ? 0 : start - 1);
+})();
+</script>
+</body>
+</html>

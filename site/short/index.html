@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rooms to Revenue — short version</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#08161E;
+  --ink-2:#123039;
+  --ivory:#F3EFE4;
+  --dim:rgba(243,239,228,.60);
+  --dimmer:rgba(243,239,228,.38);
+  --lime:#A9D046;
+  --brass:#D8A64E;
+  --rule:rgba(243,239,228,.13);
+  --serif:"Bodoni Moda",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --pad:clamp(28px,5.5vw,104px);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;height:100%}
+body{
+  background:var(--ink);
+  background-image:
+    radial-gradient(120% 90% at 12% 0%, #163B48 0%, rgba(22,59,72,0) 58%),
+    radial-gradient(90% 80% at 100% 100%, #0D2833 0%, rgba(13,40,51,0) 60%);
+  background-attachment:fixed;
+  color:var(--ivory);
+  font-family:var(--sans);
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow:hidden;
+}
+img{max-width:100%}
+[hidden]{display:none!important}
+
+/* ---------- deck shell ---------- */
+.deck{position:relative;height:100dvh;width:100%}
+.slide{
+  position:absolute;inset:0;
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  padding:calc(var(--pad) * .85) var(--pad) calc(var(--pad) * .95);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+.slide.on{display:flex;animation:settle .42s cubic-bezier(.2,.7,.3,1) both}
+@keyframes settle{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.slide.on{animation:none}}
+
+.inner{width:100%;max-width:1180px;margin:0 auto}
+
+/* ---------- ribbon progress ---------- */
+.ribbon{position:fixed;left:0;right:0;bottom:0;height:3px;background:rgba(243,239,228,.09);z-index:40}
+.ribbon i{display:block;height:100%;width:0;background:var(--lime);box-shadow:0 0 18px rgba(169,208,70,.5);transition:width .42s cubic-bezier(.2,.7,.3,1)}
+@media (prefers-reduced-motion:reduce){.ribbon i{transition:none}}
+
+.footrow{
+  position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);
+  z-index:41;padding:0 var(--pad);pointer-events:none;
+}
+.footrow>div{
+  max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.hud{
+  pointer-events:auto;display:flex;align-items:center;gap:14px;
+  font-family:var(--sans);font-size:11px;letter-spacing:.14em;color:var(--dimmer);
+  font-variant-numeric:tabular-nums;
+}
+.hud b{color:var(--ivory);font-weight:600}
+.hud button{
+  background:none;border:1px solid var(--rule);color:var(--dimmer);
+  font:inherit;letter-spacing:.14em;padding:5px 10px;border-radius:2px;cursor:pointer;
+}
+.hud button:hover{color:var(--ivory);border-color:rgba(243,239,228,.35)}
+.hud button:focus-visible,a:focus-visible,.gcell:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+
+.mark{font-size:11px;letter-spacing:.16em;color:var(--dimmer)}
+
+/* ---------- type ---------- */
+.eyebrow{
+  font-family:var(--sans);font-size:clamp(10px,1vw,12px);font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--lime);margin:0 0 clamp(18px,2.4vw,30px);
+}
+h1,h2,.fig,.ledger .num.money{
+  /* Hold Bodoni at a text optical size so the hairlines stay solid on a dark ground */
+  font-optical-sizing:none;
+  font-variation-settings:"opsz" 11;
+}
+h1{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(38px,6.4vw,88px);line-height:1.04;letter-spacing:-.018em;
+  margin:0 0 .4em;max-width:17ch;
+}
+h2{
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(28px,4vw,52px);line-height:1.1;letter-spacing:-.014em;
+  margin:0 0 clamp(20px,2.6vw,34px);max-width:22ch;
+}
+h3{
+  font-family:var(--sans);font-weight:600;font-size:clamp(15px,1.35vw,19px);
+  letter-spacing:-.005em;margin:0 0 8px;
+}
+p{font-size:clamp(14px,1.18vw,18px);line-height:1.62;color:var(--dim);margin:0 0 1em;max-width:62ch}
+p.lead{color:var(--ivory);font-size:clamp(16px,1.5vw,22px);line-height:1.5;max-width:52ch}
+strong{color:var(--ivory);font-weight:600}
+em.n{font-style:normal;color:var(--brass);font-variant-numeric:tabular-nums}
+.serif-quote{font-family:var(--serif);font-style:italic;font-weight:400}
+
+/* ---------- cover ---------- */
+.cover h1{max-width:15ch;margin-bottom:.5em}
+.cover .rule{width:120px;height:2px;background:var(--lime);margin:0 0 30px}
+.coverfoot{display:flex;flex-wrap:wrap;gap:clamp(24px,4vw,64px);margin-top:clamp(30px,5vw,64px)}
+.coverfoot div{min-width:160px}
+.coverfoot span{display:block;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer);margin-bottom:7px}
+.coverfoot b{font-weight:500;font-size:clamp(14px,1.2vw,17px);color:var(--ivory)}
+
+/* ---------- stat wall ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:clamp(22px,3vw,44px);margin-top:clamp(14px,2vw,26px)}
+.stat .fig{
+  font-family:var(--serif);font-weight:500;color:var(--brass);
+  font-size:clamp(42px,5.4vw,76px);line-height:.95;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;display:block;margin-bottom:12px;
+}
+.stat .cap{font-size:clamp(12.5px,1.05vw,15px);line-height:1.45;color:var(--dim);max-width:24ch}
+.stat{border-top:1px solid var(--rule);padding-top:20px}
+
+/* ---------- ledger ---------- */
+.ledger{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ledger caption{text-align:left;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer);padding-bottom:16px}
+.ledger th{
+  text-align:left;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dimmer);padding:0 16px 12px 0;border-bottom:1px solid var(--rule);white-space:nowrap;
+}
+.ledger td{padding:16px 16px 16px 0;border-bottom:1px solid var(--rule);font-size:clamp(13px,1.1vw,16.5px);color:var(--dim);vertical-align:top;line-height:1.45}
+.ledger td:first-child{color:var(--ivory);font-weight:500}
+.ledger .num,.ledger th.num{text-align:right;padding-left:clamp(20px,2.4vw,40px);padding-right:0;color:var(--ivory);font-weight:500;white-space:nowrap}
+.ledger .num.money{color:var(--brass);font-family:var(--serif);font-size:clamp(17px,1.7vw,25px);font-weight:500}
+.ledger tr.pick td{background:rgba(169,208,70,.065)}
+.ledger tr.pick td:first-child{box-shadow:inset 3px 0 0 var(--lime);padding-left:18px}
+.ledger tr.pick .num.money{font-size:clamp(24px,2.6vw,40px);color:var(--lime)}
+/* beats .ledger td:first-child, which would otherwise make footnotes ivory */
+.ledger tfoot td,.ledger tfoot td:first-child{
+  border-bottom:none;padding-top:18px;color:var(--dimmer);font-size:12.5px;font-weight:400;line-height:1.55;
+}
+.tag{display:inline-block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--lime);border:1px solid rgba(169,208,70,.45);border-radius:2px;padding:3px 7px;margin-left:10px;vertical-align:2px;font-weight:600}
+.scroller{overflow-x:auto;-webkit-overflow-scrolling:touch}
+
+/* ---------- leak list ---------- */
+.leaks{list-style:none;margin:0;padding:0;display:grid;gap:clamp(18px,2.4vw,30px)}
+.leaks li{display:grid;grid-template-columns:minmax(0,1fr);gap:6px;border-left:2px solid var(--rule);padding-left:clamp(18px,2.2vw,28px)}
+.leaks li.hot{border-left-color:var(--lime)}
+.leaks h3{margin-bottom:5px}
+.leaks p{margin:0;max-width:70ch}
+
+/* ---------- engine diagram ---------- */
+.engine{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);margin-top:clamp(10px,2vw,22px)}
+.engine div{background:rgba(8,22,30,.55);padding:clamp(18px,2.2vw,26px);backdrop-filter:blur(2px)}
+.engine .step{font-family:var(--serif);font-size:13px;color:var(--lime);display:block;margin-bottom:12px;font-variant-numeric:tabular-nums}
+.engine h3{font-size:clamp(14px,1.2vw,17px);margin-bottom:7px}
+.engine p{font-size:clamp(12px,1vw,14.5px);line-height:1.5;margin:0}
+
+/* ---------- two-col ---------- */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(26px,4vw,64px);align-items:start}
+.two.narrow{gap:clamp(22px,3vw,44px)}
+
+/* ---------- proof strip ---------- */
+.strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:clamp(10px,1.4vw,18px);margin-top:clamp(16px,2.4vw,28px)}
+.strip figure{margin:0}
+.strip img{display:block;width:100%;height:auto;border:1px solid var(--rule);border-radius:2px}
+.strip figcaption{font-size:11px;color:var(--dimmer);margin-top:9px;letter-spacing:.04em;line-height:1.4}
+
+/* ---------- checklist ---------- */
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:13px}
+.checks li{position:relative;padding-left:26px;font-size:clamp(13px,1.1vw,16px);line-height:1.5;color:var(--dim)}
+.checks li::before{content:"";position:absolute;left:0;top:.6em;width:11px;height:1px;background:var(--lime)}
+.checks li b{color:var(--ivory);font-weight:600}
+.checks.muted li::before{background:var(--dimmer)}
+
+/* the plain-English point of each slide — set apart by voice, not by a label */
+.sofw{
+  margin-top:clamp(20px,2.8vw,36px);
+  border-left:2px solid var(--lime);
+  padding-left:clamp(16px,1.9vw,24px);
+  font-family:var(--serif);font-style:italic;font-weight:500;
+  font-size:clamp(15px,1.5vw,21px);line-height:1.45;color:var(--ivory);
+  max-width:56ch;
+}
+
+/* ---------- close ---------- */
+.close h1{max-width:19ch}
+.askbox{border:1px solid var(--rule);border-left:3px solid var(--lime);padding:clamp(22px,3vw,34px);max-width:640px;margin-top:clamp(18px,2.4vw,30px)}
+.askbox p:last-child{margin-bottom:0}
+.links{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:clamp(12.5px,1.05vw,15px)}
+.links a{color:var(--lime);text-decoration:none;border-bottom:1px solid rgba(169,208,70,.35);padding-bottom:1px}
+.links a:hover{border-bottom-color:var(--lime)}
+
+/* ---------- sources ---------- */
+.srcs{columns:2;column-gap:clamp(28px,4vw,60px);font-size:12px;line-height:1.7;color:var(--dimmer)}
+.srcs a{color:var(--dim);text-decoration:none;border-bottom:1px solid var(--rule)}
+.srcs a:hover{color:var(--lime);border-color:var(--lime)}
+.srcs p{font-size:12px;line-height:1.7;color:var(--dimmer);max-width:none;break-inside:avoid;margin:0 0 .85em}
+
+/* ---------- overview grid ---------- */
+.grid{position:fixed;inset:0;z-index:60;background:rgba(6,17,23,.97);padding:calc(env(safe-area-inset-top,0px) + 28px) 28px 28px;overflow-y:auto}
+.gwrap{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;max-width:1200px;margin:0 auto}
+.gcell{border:1px solid var(--rule);background:rgba(18,48,57,.4);padding:16px;text-align:left;cursor:pointer;color:var(--ivory);font-family:var(--sans);border-radius:2px}
+.gcell:hover{border-color:var(--lime)}
+.gcell span{display:block;font-size:10px;letter-spacing:.14em;color:var(--dimmer);margin-bottom:9px;font-variant-numeric:tabular-nums}
+.gcell b{font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.2;display:block}
+.gtitle{max-width:1200px;margin:0 auto 22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dimmer)}
+
+/* ---------- mobile ---------- */
+@media (max-width:640px){
+  body{overflow:auto}
+  .deck{height:auto}
+  .slide{position:static;display:flex!important;animation:none;min-height:auto;padding:56px 20px;border-bottom:1px solid var(--rule)}
+  .footrow{display:none}
+  .ribbon{display:none}
+  .srcs{columns:1}
+  h1{max-width:none}
+  h2{max-width:none}
+}
+
+/* ---------- print / PDF ---------- */
+@media print{
+  html,body{overflow:visible;background:#08161E!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .deck{height:auto}
+  .slide{position:static;display:flex!important;animation:none;height:180mm;page-break-after:always;break-after:page;padding:14mm;overflow:hidden}
+  .footrow,.ribbon,.grid{display:none!important}
+  @page{size:297mm 190mm;margin:0}
+}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+<!-- 1 -->
+<section class="slide cover" data-title="Rooms to revenue">
+  <div class="inner">
+    <p class="eyebrow">Growth partnership · September 2026</p>
+    <div class="rule"></div>
+    <h1>Your room is worth more than the door.</h1>
+    <p class="lead">A 90-day plan to turn 60,000 Builder Series members from an audience into a book of business — without changing a single thing about how you curate the room.</p>
+    <div class="coverfoot">
+      <div><span>Prepared for</span><b>Dylan Oriundo</b></div>
+      <div><span>The Builder Series</span><b>New York City</b></div>
+      <div><span>Prepared by</span><b>Emmanuel Olimi Kasigazi</b></div>
+      <div><span>Read time</span><b>4 minutes</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="slide" data-title="The 60-second version">
+  <div class="inner">
+    <p class="eyebrow">If you read one page</p>
+    <h2>You sell $20–$60 tickets into rooms that hold billions.</h2>
+    <div class="two">
+      <div>
+        <p>The ticket is the smallest number in the building. The relationships, and the fact that 60,000 founders already trust your judgement — that is the asset, and right now none of it is captured, followed up, or sold into.</p>
+        <p>I build the machinery underneath The Builder Series: one contact list that remembers every RSVP, AI that answers every message in seconds, and a fixed-price growth service you can sell to your own members.</p>
+      </div>
+      <div>
+        <ul class="checks">
+          <li><b>Month 1</b> — Build it. Earn from the contacts you already own.</li>
+          <li><b>Month 2</b> — Launch growth packages, branded as yours, to your founders.</li>
+          <li><b>Month 3</b> — Train your team, hand over the playbook, step back.</li>
+          <li><b>Your time</b> — Two hours a week. I execute, you approve.</li>
+          <li><b>The ask</b> — $1,500 a month for three months.</li>
+        </ul>
+      </div>
+    </div>
+    <p class="sofw">Two hours a week of your time, and a price below what your own members would pay.</p>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="slide" data-title="What you own vs what you charge">
+  <div class="inner">
+    <p class="eyebrow">The gap</p>
+    <h2>Most people spend a decade building what you built in twelve months.</h2>
+    <div class="stats">
+      <div class="stat"><span class="fig">60k+</span><span class="cap">Members across Luma, LinkedIn, Instagram, WhatsApp and beehiiv</span></div>
+      <div class="stat"><span class="fig">$3B</span><span class="cap">Capital in a single room, at a single event, on one night</span></div>
+      <div class="stat"><span class="fig">~$8k</span><span class="cap">What 160 RSVPs at the door actually brought in</span></div>
+      <div class="stat"><span class="fig">$15k+</span><span class="cap">What a title sponsor pays for that same room in NYC ($15–25k), currently unsold</span></div>
+    </div>
+    <p class="sofw">Two sponsors a month would out-earn every ticket you've ever sold.</p>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="slide" data-title="What's missing">
+  <div class="inner">
+    <p class="eyebrow">Why it happens</p>
+    <h2>Nothing is broken. Three things are simply missing.</h2>
+    <ul class="leaks">
+      <li class="hot">
+        <h3>An RSVP is not a contact</h3>
+        <p>Names sit in Luma, beehiiv, WhatsApp and LinkedIn, and none of them talk to each other. Nobody can answer "who came twice, who's raising, who's hiring" — so nobody can sell to them.</p>
+      </li>
+      <li class="hot">
+        <h3>Follow-up depends on you remembering</h3>
+        <p>Every partnership enquiry, sponsor question and DM routes to one inbox and one person. The ones you don't get to aren't lost loudly. They just go quiet.</p>
+      </li>
+      <li class="hot">
+        <h3>Your members buy growth help — from someone else</h3>
+        <p>27% of small businesses have no real web presence, and 27% are actively shopping for a marketing provider. Your founders are in that market right now, and you have nothing to sell them.</p>
+      </li>
+    </ul>
+    <p class="sofw">All three are one-time setups. None of them become another thing you have to keep up with.</p>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="slide" data-title="Four revenue lines">
+  <div class="inner">
+    <p class="eyebrow">What it turns into</p>
+    <h2>Four ways the same system pays you.</h2>
+    <div class="scroller">
+      <table class="ledger">
+        <thead><tr><th>Revenue line</th><th>In one sentence</th><th class="num">Conservatively</th></tr></thead>
+        <tbody>
+          <tr><td>Your old contacts</td><td>One proper campaign to people who already said yes to you once. Costs 60–80% less than finding anyone new.</td><td class="num money">$6,000/mo</td></tr>
+          <tr class="pick"><td>Growth packages<span class="tag">Biggest</span></td><td>Sell your founders a fixed-price growth service, branded Builder Series, delivered by me. $500, $1,500 or $3,000 a month each — all under the NYC market rate.</td><td class="num money">$60,000/mo</td></tr>
+          <tr><td>Newsletter &amp; sponsors</td><td>Same list, priced on who reads it instead of how many. Proving your readers are founders takes the rate from $60 to $140 per thousand.</td><td class="num money">2× the rate</td></tr>
+          <tr><td>Software seats</td><td>The same tools, carrying your logo and your prices, sold monthly to members who'd rather run it themselves.</td><td class="num money">~94% margin</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">Growth packages figure assumes 40 members on the middle tier — fewer than one in a thousand of your community saying yes. Models, not forecasts; rebuilt on your real numbers in week one.</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="sofw">You're not selling anything new. You're charging for the introduction you already make for free.</p>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="slide" data-title="Month one is already built">
+  <div class="inner">
+    <p class="eyebrow">Proof, not promises</p>
+    <h2 style="font-size:clamp(24px,3.3vw,44px);max-width:34ch;margin-bottom:clamp(14px,1.8vw,22px)">I didn't come to pitch you a plan. I came to show you month one, finished.</h2>
+    <div class="strip">
+      <figure><img src="../assets/graphics/01_follow_up_hook.png" alt="Campaign graphic: Your next client is waiting for a reply."><figcaption>Week 1 — enquiries and follow-up</figcaption></figure>
+      <figure><img src="../assets/graphics/02_ai_workflow_hook.png" alt="Campaign graphic: Give your AI a useful next step."><figcaption>Week 2 — AI that does something</figcaption></figure>
+      <figure><img src="../assets/graphics/03_reach_hook.png" alt="Campaign graphic: Reach the right people."><figcaption>Week 3 — reaching the right people</figcaption></figure>
+      <figure><img src="../assets/graphics/04_booking_hook.png" alt="Campaign graphic: Make it easy to take the next step."><figcaption>Week 4 — easy booking</figcaption></figure>
+    </div>
+    <div class="two narrow" style="margin-top:clamp(16px,2vw,26px)">
+      <ul class="checks">
+        <li><b>12 finished graphics</b> with captions written per channel</li>
+        <li><b>A 28-day calendar</b> with daily actions and owners</li>
+      </ul>
+      <ul class="checks">
+        <li><b>Eight email sequences</b> plus reply and booking scripts</li>
+        <li><b>Nothing sent yet</b> — it waits for your approval and your brand</li>
+      </ul>
+    </div>
+    <p class="sofw">If you said yes on Monday, week one is already written.</p>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="slide" data-title="The ask">
+  <div class="inner">
+    <p class="eyebrow">The ask</p>
+    <h2 style="font-size:clamp(26px,3.5vw,46px);max-width:30ch;margin-bottom:clamp(16px,2vw,26px)">Here is what this costs in New York. Here is what I'm asking you for.</h2>
+    <div class="scroller">
+      <table class="ledger">
+        <thead><tr><th>Who you could hire</th><th>What you'd actually get</th><th class="num">Per month</th></tr></thead>
+        <tbody>
+          <tr><td>Fractional growth lead</td><td>Advice, 10–20 hours a week. You still have to build all of it.</td><td class="num money">$8,000–25,000</td></tr>
+          <tr><td>Full-service growth agency</td><td>Delivery, but they own the strategy and you own the invoice.</td><td class="num money">$4,500–15,000</td></tr>
+          <tr><td>Social media manager</td><td>Posts. Nothing behind them to catch the people who respond.</td><td class="num money">$1,000–5,000</td></tr>
+          <tr class="pick"><td>Emmanuel<span class="tag">3 months</span></td><td>The strategy and the build. All four revenue lines, your team trained, everything handed over.</td><td class="num money">$1,500</td></tr>
+        </tbody>
+        <tfoot><tr><td colspan="3">$4,500 for the full three months. Software and usage billed separately at cost. No lock-in, no notice period. Market rates from 2026 US pricing surveys — sources on request.</td></tr></tfoot>
+      </table>
+    </div>
+    <p style="margin-top:clamp(16px,2vw,26px);max-width:76ch">That's not the market rate and I'm not pretending it is — the table above is. I'm asking for a fraction because I know you, and I'd rather have the case study and the room than the margin.</p>
+    <p class="sofw">I'm charging you exactly what one of your members will pay for the package I'm building for you to sell them.</p>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="slide close" data-title="Next step">
+  <div class="inner">
+    <p class="eyebrow">Next step</p>
+    <h1 style="font-size:clamp(30px,4.4vw,58px);max-width:22ch;margin-bottom:.45em">One working session. Thirty minutes. Bring your Luma export.</h1>
+    <p class="lead">We'll pull the real list size, check who agreed to be emailed, and rebuild the numbers on your actuals instead of my conservative ones. You'll leave knowing what month one is worth — whether or not you hire me.</p>
+    <div class="askbox">
+      <p style="color:var(--ivory);margin-bottom:10px"><strong>Emmanuel Olimi Kasigazi</strong> — New York, NY</p>
+      <p style="margin-bottom:12px">13+ years building and scaling a B2B firm that served 300+ clients across five countries. Antler founder-in-residence, NSF I-Corps entrepreneurial lead, finishing an M.S. in Data Analytics at Yeshiva. I build the systems, and I'm twenty minutes from your rooms.</p>
+      <p class="links" style="margin-bottom:0">
+        <a href="https://calendly.com/olimiemma">Book a time — calendly.com/olimiemma</a>
+        <a href="mailto:olimiemma@gmail.com">olimiemma@gmail.com</a>
+        <a href="https://www.linkedin.com/in/olimiemma/">LinkedIn</a>
+        <a href="https://linktr.ee/olimiemma">linktr.ee/olimiemma</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ribbon" aria-hidden="true"><i id="bar"></i></div>
+<div class="footrow"><div>
+  <span class="mark">The Builder Series × Emmanuel Olimi Kasigazi</span>
+  <span class="hud">
+    <button id="gridbtn" aria-label="Show all slides">All slides</button>
+    <span><b id="cur">1</b> / <span id="tot">8</span></span>
+  </span>
+</div></div>
+
+<div class="grid" id="grid" hidden>
+  <div class="gtitle">All slides — click to jump, Escape to close</div>
+  <div class="gwrap" id="gwrap"></div>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var bar = document.getElementById('bar');
+  var cur = document.getElementById('cur');
+  var grid = document.getElementById('grid');
+  var gwrap = document.getElementById('gwrap');
+  var i = 0;
+  var mobile = window.matchMedia('(max-width:640px)');
+
+  document.getElementById('tot').textContent = slides.length;
+
+  slides.forEach(function(s, n){
+    var b = document.createElement('button');
+    b.className = 'gcell';
+    b.innerHTML = '<span>' + String(n+1).padStart(2,'0') + '</span><b></b>';
+    b.querySelector('b').textContent = s.dataset.title || ('Slide ' + (n+1));
+    b.addEventListener('click', function(){ closeGrid(); go(n); });
+    gwrap.appendChild(b);
+  });
+
+  function go(n){
+    if (mobile.matches) {
+      slides[Math.max(0, Math.min(n, slides.length-1))].scrollIntoView({behavior:'smooth', block:'start'});
+      return;
+    }
+    i = Math.max(0, Math.min(n, slides.length - 1));
+    slides.forEach(function(s, k){ s.classList.toggle('on', k === i); });
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    cur.textContent = i + 1;
+    var live = slides[i];
+    live.scrollTop = 0;
+    try { history.replaceState(null, '', '#' + (i + 1)); } catch(e){}
+  }
+
+  function openGrid(){ grid.hidden = false; }
+  function closeGrid(){ grid.hidden = true; }
+  document.getElementById('gridbtn').addEventListener('click', function(){
+    grid.hidden ? openGrid() : closeGrid();
+  });
+
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { closeGrid(); return; }
+    if (e.key === 'g' || e.key === 'G') { grid.hidden ? openGrid() : closeGrid(); return; }
+    if (!grid.hidden) return;
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(i + 1); }
+    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(i - 1); }
+    else if (e.key === 'Home') { go(0); }
+    else if (e.key === 'End') { go(slides.length - 1); }
+  });
+
+  document.addEventListener('click', function(e){
+    if (mobile.matches) return;
+    if (!grid.hidden) return;
+    if (e.target.closest('a, button, .scroller, table')) return;
+    go(i + (e.clientX < window.innerWidth * 0.28 ? -1 : 1));
+  });
+
+  var x0 = null;
+  document.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
+  document.addEventListener('touchend', function(e){
+    if (x0 === null || mobile.matches) return;
+    var dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 55) go(i + (dx < 0 ? 1 : -1));
+    x0 = null;
+  }, {passive:true});
+
+  var start = parseInt((location.hash || '').replace('#',''), 10);
+  go(isNaN(start) ? 0 : start - 1);
+})();
+</script>
+</body>
+</html>
