@@ -53,7 +53,13 @@ Every push to `main` redeploys automatically.
 | `/files/` | PDFs, CSVs and the raw source text | Downloads |
 
 Both decks are keyboard-driven: **arrow keys** or **space** to advance, **G** for the overview
-grid, swipe on tablet. They collapse to a scrolling page on phones and print to landscape PDF.
+grid. Phones and touch tablets use a scrolling page with slide taps, previous/next buttons,
+and an overview for jumping between slides. The decks print to landscape PDF.
+
+Touch navigation regression checks live in `tests/deck-touch.mjs`. With the site served on
+port 4173 and a dedicated Chrome instance exposing remote debugging on port 9222, run
+`node tests/deck-touch.mjs`. The suite sends browser touch gestures with smooth scrolling
+enabled. See `MOBILE_UI_UX_REPORT.md` for coverage and limitations.
 
 ---
 

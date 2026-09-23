@@ -237,8 +237,10 @@ em.n{font-style:normal;color:var(--brass);font-variant-numeric:tabular-nums}
   @page{size:297mm 190mm;margin:0}
 }
 </style>
+<link rel="stylesheet" href="site/assets/responsive.css?v=20260923">
+<script src="site/assets/ui.js" defer></script>
 </head>
-<body>
+<body class="page-deck">
 
 <div class="deck" id="deck">
 
@@ -645,76 +647,6 @@ em.n{font-style:normal;color:var(--brass);font-variant-numeric:tabular-nums}
   <div class="gwrap" id="gwrap"></div>
 </div>
 
-<script>
-(function(){
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-  var bar = document.getElementById('bar');
-  var cur = document.getElementById('cur');
-  var grid = document.getElementById('grid');
-  var gwrap = document.getElementById('gwrap');
-  var i = 0;
-  var mobile = window.matchMedia('(max-width:640px)');
-
-  document.getElementById('tot').textContent = slides.length;
-
-  slides.forEach(function(s, n){
-    var b = document.createElement('button');
-    b.className = 'gcell';
-    b.innerHTML = '<span>' + String(n+1).padStart(2,'0') + '</span><b></b>';
-    b.querySelector('b').textContent = s.dataset.title || ('Slide ' + (n+1));
-    b.addEventListener('click', function(){ closeGrid(); go(n); });
-    gwrap.appendChild(b);
-  });
-
-  function go(n){
-    if (mobile.matches) {
-      slides[Math.max(0, Math.min(n, slides.length-1))].scrollIntoView({behavior:'smooth', block:'start'});
-      return;
-    }
-    i = Math.max(0, Math.min(n, slides.length - 1));
-    slides.forEach(function(s, k){ s.classList.toggle('on', k === i); });
-    bar.style.width = ((i + 1) / slides.length * 100) + '%';
-    cur.textContent = i + 1;
-    var live = slides[i];
-    live.scrollTop = 0;
-    try { history.replaceState(null, '', '#' + (i + 1)); } catch(e){}
-  }
-
-  function openGrid(){ grid.hidden = false; }
-  function closeGrid(){ grid.hidden = true; }
-  document.getElementById('gridbtn').addEventListener('click', function(){
-    grid.hidden ? openGrid() : closeGrid();
-  });
-
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape') { closeGrid(); return; }
-    if (e.key === 'g' || e.key === 'G') { grid.hidden ? openGrid() : closeGrid(); return; }
-    if (!grid.hidden) return;
-    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') { e.preventDefault(); go(i + 1); }
-    else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(i - 1); }
-    else if (e.key === 'Home') { go(0); }
-    else if (e.key === 'End') { go(slides.length - 1); }
-  });
-
-  document.addEventListener('click', function(e){
-    if (mobile.matches) return;
-    if (!grid.hidden) return;
-    if (e.target.closest('a, button, .scroller, table')) return;
-    go(i + (e.clientX < window.innerWidth * 0.28 ? -1 : 1));
-  });
-
-  var x0 = null;
-  document.addEventListener('touchstart', function(e){ x0 = e.touches[0].clientX; }, {passive:true});
-  document.addEventListener('touchend', function(e){
-    if (x0 === null || mobile.matches) return;
-    var dx = e.changedTouches[0].clientX - x0;
-    if (Math.abs(dx) > 55) go(i + (dx < 0 ? 1 : -1));
-    x0 = null;
-  }, {passive:true});
-
-  var start = parseInt((location.hash || '').replace('#',''), 10);
-  go(isNaN(start) ? 0 : start - 1);
-})();
-</script>
+<script src="site/assets/deck.js?v=20260923"></script>
 </body>
 </html>

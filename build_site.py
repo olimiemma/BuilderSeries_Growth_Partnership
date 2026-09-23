@@ -127,8 +127,10 @@ def shell(title, body, depth=1, noindex=False):
 <title>{html.escape(title)}</title>
 {FONTS}
 <link rel="stylesheet" href="{up}assets/site.css">
+<link rel="stylesheet" href="{up}assets/responsive.css?v=20260923">
+<script src="{up}assets/ui.js" defer></script>
 </head>
-<body>
+<body class="page-doc">
 <div class="wrap">
 {body}
 <footer>The Builder Series growth partnership · prepared by Emmanuel Olimi Kasigazi ·
