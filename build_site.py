@@ -129,6 +129,8 @@ def shell(title, body, depth=1, noindex=False):
 <link rel="stylesheet" href="{up}assets/site.css">
 <link rel="stylesheet" href="{up}assets/responsive.css?v=20260923">
 <script src="{up}assets/ui.js" defer></script>
+<link rel="stylesheet" href="{up}assets/experience.css?v=9ae8e9a50fa8">
+<script src="{up}assets/experience.js?v=23e35d625592" defer></script>
 </head>
 <body class="page-doc">
 <div class="wrap">

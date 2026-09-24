@@ -61,6 +61,11 @@ port 4173 and a dedicated Chrome instance exposing remote debugging on port 9222
 `node tests/deck-touch.mjs`. The suite sends browser touch gestures with smooth scrolling
 enabled. See `MOBILE_UI_UX_REPORT.md` for coverage and limitations.
 
+The site also has Stories-style reading progress, section shortcuts, one-time card reveals,
+touch feedback, and a swipeable full-screen viewer for the campaign artwork. These reuse
+the existing content and respect reduced motion. Run `node tests/experience-touch.mjs`
+against the same local server and Chrome instance to check the new interactions.
+
 ---
 
 ## Repository layout

@@ -163,3 +163,20 @@ node tests/deck-touch.mjs
 ```
 
 These remain local browser-emulation tests, not physical iPhone, Android, or Safari verification. The live page URL and device/browser were requested to distinguish the local implementation from the version the user is opening. No deployment was performed during the original update or this audit.
+
+## September 23: engaging scrolling and artwork interactions
+
+The next update adds a social-style presentation layer while preserving the original copy, images, and anchor destinations:
+
+- Segmented Stories-style progress tracks the current slide and reading position in both decks. Other pages get a slim reading-progress indicator.
+- Sticky pill-shaped shortcuts on the landing page and campaign-kit page reuse the existing section headings and show the current section.
+- Cards and selected visual blocks enter with a short, one-time animation. Content stays visible before JavaScript runs and when reduced motion is requested.
+- Existing destination cards gain gradient accents, arrow cues, and touch feedback. The deck overview highlights the selected slide.
+- A floating return-to-top button shows reading progress in its circular outline. A new touch can interrupt its animation immediately.
+- Campaign artwork opens in a full-screen native dialog with existing captions, previous/next buttons, swipe navigation, a position counter, keyboard arrows, and Escape-to-close. Closing restores the reader's scroll position and keyboard focus.
+
+New assets: `site/assets/experience.css` and `site/assets/experience.js`. All public pages, authored source documents, and the generator reference the versioned assets. The presentation layer adds no external JavaScript dependency.
+
+`tests/experience-touch.mjs` checks browser-level taps and swipes, chapter navigation, gallery controls, scroll/focus restoration, landscape layout, all nine routes at 320/390/768/1440px, reduced-motion behavior, and visible gallery content with JavaScript disabled. Mobile screenshots were also reviewed. The existing deck touch suite is rerun to guard the previously repaired navigation.
+
+Both suites passed on the final implementation, with no browser JavaScript exceptions. The 12 tracked HTML documents retain their original source text and anchor destinations, and regenerating the kit preserves the final versioned asset references. These results cover Chrome emulation; physical Safari and Android device testing remains unverified.
