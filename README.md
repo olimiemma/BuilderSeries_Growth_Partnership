@@ -66,6 +66,11 @@ touch feedback, and a swipeable full-screen viewer for the campaign artwork. The
 the existing content and respect reduced motion. Run `node tests/experience-touch.mjs`
 against the same local server and Chrome instance to check the new interactions.
 
+The continuing [UI/UX work report](MOBILE_UI_UX_REPORT.md) records the complete change history,
+file inventory, defects and corrections, test evidence, commits, and known limits. Update its
+dated log and current delivery status with each future work batch. Record pushes separately
+from verified production deployments.
+
 ---
 
 ## Repository layout
